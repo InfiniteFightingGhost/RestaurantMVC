@@ -38,13 +38,16 @@ namespace WinFormsApp1.Model
             }
             return "Drinks loaded successfully";
         }
-        public string AddDrinkToFile(Drink drink)
+        public string AddDrinkToFile()
         {
             using (StreamWriter sw = new StreamWriter("drinks.txt", false, Encoding.UTF8))
             {
-                sw.WriteLine(drink.ToString());
+                foreach(var drink in Drinks)
+                {
+                    sw.WriteLine(drink.ToString());
+                }
             }
-            return "Drink added successfully";
+            return "Drinks added successfully";
         }
     }
 }
