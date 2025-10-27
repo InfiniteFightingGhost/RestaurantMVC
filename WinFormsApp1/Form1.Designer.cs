@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             panel1 = new Panel();
+            button17 = new Button();
             button3 = new Button();
             button2 = new Button();
             button1 = new Button();
@@ -47,14 +48,19 @@
             button12 = new Button();
             button11 = new Button();
             button10 = new Button();
+            tabControl1 = new TabControl();
+            tabPage1 = new TabPage();
+            tabPage2 = new TabPage();
             panel1.SuspendLayout();
             panel2.SuspendLayout();
             panel3.SuspendLayout();
+            tabControl1.SuspendLayout();
             SuspendLayout();
             // 
             // panel1
             // 
             panel1.BackColor = SystemColors.ControlDarkDark;
+            panel1.Controls.Add(button17);
             panel1.Controls.Add(button3);
             panel1.Controls.Add(button2);
             panel1.Controls.Add(button1);
@@ -63,20 +69,31 @@
             panel1.Size = new Size(211, 1200);
             panel1.TabIndex = 0;
             // 
+            // button17
+            // 
+            button17.Location = new Point(21, 680);
+            button17.Name = "button17";
+            button17.Size = new Size(170, 37);
+            button17.TabIndex = 4;
+            button17.Text = "Exit";
+            button17.UseVisualStyleBackColor = true;
+            button17.Click += button17_Click;
+            // 
             // button3
             // 
-            button3.Location = new Point(21, 145);
+            button3.Location = new Point(21, 126);
             button3.Name = "button3";
-            button3.Size = new Size(167, 37);
+            button3.Size = new Size(170, 37);
             button3.TabIndex = 3;
             button3.Text = "Drinks";
             button3.UseVisualStyleBackColor = true;
+            button3.Click += button3_Click;
             // 
             // button2
             // 
-            button2.Location = new Point(21, 92);
+            button2.Location = new Point(21, 83);
             button2.Name = "button2";
-            button2.Size = new Size(167, 37);
+            button2.Size = new Size(170, 37);
             button2.TabIndex = 2;
             button2.Text = "Food";
             button2.UseVisualStyleBackColor = true;
@@ -84,9 +101,9 @@
             // 
             // button1
             // 
-            button1.Location = new Point(21, 37);
+            button1.Location = new Point(21, 36);
             button1.Name = "button1";
-            button1.Size = new Size(167, 38);
+            button1.Size = new Size(170, 38);
             button1.TabIndex = 1;
             button1.Text = "MainMenu";
             button1.UseVisualStyleBackColor = true;
@@ -101,7 +118,7 @@
             panel2.Controls.Add(button6);
             panel2.Controls.Add(button5);
             panel2.Controls.Add(button4);
-            panel2.Location = new Point(254, 158);
+            panel2.Location = new Point(208, 456);
             panel2.Name = "panel2";
             panel2.Size = new Size(172, 269);
             panel2.TabIndex = 1;
@@ -178,9 +195,9 @@
             panel3.Controls.Add(button12);
             panel3.Controls.Add(button11);
             panel3.Controls.Add(button10);
-            panel3.Location = new Point(449, 158);
+            panel3.Location = new Point(398, 456);
             panel3.Name = "panel3";
-            panel3.Size = new Size(168, 269);
+            panel3.Size = new Size(168, 260);
             panel3.TabIndex = 2;
             // 
             // button16
@@ -237,11 +254,42 @@
             button10.Text = "Add drink";
             button10.UseVisualStyleBackColor = true;
             // 
+            // tabControl1
+            // 
+            tabControl1.Controls.Add(tabPage1);
+            tabControl1.Controls.Add(tabPage2);
+            tabControl1.Location = new Point(207, 6);
+            tabControl1.Name = "tabControl1";
+            tabControl1.SelectedIndex = 0;
+            tabControl1.Size = new Size(1054, 719);
+            tabControl1.TabIndex = 3;
+            // 
+            // tabPage1
+            // 
+            tabPage1.Location = new Point(4, 29);
+            tabPage1.Name = "tabPage1";
+            tabPage1.Padding = new Padding(3);
+            tabPage1.Size = new Size(1046, 686);
+            tabPage1.TabIndex = 0;
+            tabPage1.Text = "tabPage1";
+            tabPage1.UseVisualStyleBackColor = true;
+            // 
+            // tabPage2
+            // 
+            tabPage2.Location = new Point(4, 29);
+            tabPage2.Name = "tabPage2";
+            tabPage2.Padding = new Padding(3);
+            tabPage2.Size = new Size(1046, 686);
+            tabPage2.TabIndex = 1;
+            tabPage2.Text = "tabPage2";
+            tabPage2.UseVisualStyleBackColor = true;
+            // 
             // Form1
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(1273, 737);
+            Controls.Add(tabControl1);
             Controls.Add(panel3);
             Controls.Add(panel2);
             Controls.Add(panel1);
@@ -250,6 +298,7 @@
             panel1.ResumeLayout(false);
             panel2.ResumeLayout(false);
             panel3.ResumeLayout(false);
+            tabControl1.ResumeLayout(false);
             ResumeLayout(false);
         }
 
@@ -274,5 +323,9 @@
         private Button button16;
         private Button button15;
         private Button button14;
+        private TabControl tabControl1;
+        private TabPage tabPage1;
+        private TabPage tabPage2;
+        private Button button17;
     }
 }
