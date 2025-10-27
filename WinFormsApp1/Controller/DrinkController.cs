@@ -1,9 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Security.Cryptography.X509Certificates;
-using System.Text;
-using System.Threading.Tasks;
+﻿using System.Text;
 using WinFormsApp1.Model;
 
 namespace WinFormsApp1.Controller
@@ -15,76 +10,23 @@ namespace WinFormsApp1.Controller
             AllDrinks = new AllDrink();
         }
         public AllDrink AllDrinks { get; set; }
-
-        public void AddDrinkToFile()
-        {
-            StreamWriter sw = new StreamWriter("drinks.txt", true, Encoding.UTF8);
-            using (sw)
-            {
-                foreach (var drink in AllDrinks.Drinks)
-                {
-                    sw.WriteLine(drink.ToString());
-                }
-            }
-        }
-        public void DeleteDrinkFromFile(string name)
-        {
-            var lines = File.ReadAllLines("drinks.txt").ToList();
-            lines = lines.Where(line => !line.Contains(name)).ToList();
-            File.WriteAllLines("drinks.txt", lines);
-        }
-        public List<string> ReadDrinksFromFile()
+        public List<string> ReadSoftDrinksList()
         {
             List<string> drinks = new List<string>();
-            StreamReader sr = new StreamReader("drinks.txt", Encoding.UTF8);
-            using (sr)
+            foreach (var line in AllDrinks.Drinks.Where(d => d is SoftDrink))
             {
-                string line;
-                while ((line = sr.ReadLine()) != null)
-                {
-                    drinks.Add(line);
-                }
+                drinks.Add(line.ToString());
             }
             return drinks;
         }
-        public void ClearDrinksFile()
-        {
-            File.WriteAllText("drinks.txt", string.Empty);
-        }
-        public List<string> ReadSoftDrinksFromFile()
+        public List<string> ReadAlcoholicDrinksList()
         {
             List<string> drinks = new List<string>();
-            StreamReader sr = new StreamReader("drinks.txt", Encoding.UTF8);
-            using (sr)
+            foreach (var line in AllDrinks.Drinks.Where(d => d is AlcoholicDrink))
             {
-                string line;
-                while ((line = sr.ReadLine()) != null)
-                {
-                    if (!line.Contains('%'))
-                    {
-                        drinks.Add(line);
-                    }
-                }
+                drinks.Add(line.ToString());
             }
             return drinks;
         }
-        public List<string> ReadAlcoholicDrinksFromFile()
-        {
-            List<string> drinks = new List<string>();
-            StreamReader sr = new StreamReader("drinks.txt", Encoding.UTF8);
-            using (sr)
-            {
-                string line;
-                while ((line = sr.ReadLine()) != null)
-                {
-                    if (line.Contains('%'))
-                    {
-                        drinks.Add(line);
-                    }
-                }
-            }
-            return drinks;
-        }
-
     }
 }
