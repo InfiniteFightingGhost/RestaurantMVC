@@ -13,7 +13,7 @@ namespace WinFormsApp1.Model
             Foods = new List<Food>();
         }
         public List<Food> Foods { get; set; }
-        public void WriteFoodsToFile(List<Food> foods)
+        public void WriteFoodsToFile()
         {
             StreamWriter writer = new StreamWriter("foods.txt", false, Encoding.UTF8);
             using (writer)
