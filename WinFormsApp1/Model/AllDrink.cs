@@ -1,8 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using System.Text;
 
 namespace WinFormsApp1.Model
 {
@@ -14,35 +10,6 @@ namespace WinFormsApp1.Model
         }
         public List<Drink> Drinks { get; set; }
 
-        public string AddSoftDrink(string name, double price, int ml)
-        {
-            File.WriteAllText("drinks.txt", $"SoftDrink|{name}|{price}|{ml}ml");
-            return "Soft drink added successfully";
-        }
-        public string AddAlcoholicDrink(string name, double price, int ml, double percent)
-        {
-            File.WriteAllText("drinks.txt", $"AlcoholicDrink|{name}|{price}|{ml}ml|{percent:f1}%");
-            return "Alcoholic drink added successfully";
-        }
-        public string ChangeDrinkInfo(string name, double price, int ml, double percent)
-        {
-            var lines = File.ReadAllLines("drinks.txt").ToList();
-            for (int i = 0; i < lines.Count; i++)
-            {
-                if (lines[i].Contains(name))
-                {
-                    if (percent > 0)
-                    {
-                        lines[i] = $"AlcoholicDrink|{name}|{price}|{ml}ml|{percent:f1}%";
-                    }
-                    else
-                    {
-                        lines[i] = $"SoftDrink|{name}|{price}|{ml}ml";
-                    }
-                }
-            }
-            return "Drink info changed successfully";
-        }
         public string AddDrinksFromFile()
         {
             StreamReader sr = new StreamReader("drinks.txt", Encoding.UTF8);
@@ -71,12 +38,13 @@ namespace WinFormsApp1.Model
             }
             return "Drinks loaded successfully";
         }
-        public string DeleteDrinkFromFile(string name)
+        public string AddDrinkToFile(Drink drink)
         {
-            var lines = File.ReadAllLines("drinks.txt").ToList();
-            lines = lines.Where(line => !line.Contains(name)).ToList();
-            File.WriteAllLines("drinks.txt", lines);
-            return "Drink deleted successfully";
+            using (StreamWriter sw = new StreamWriter("drinks.txt", false, Encoding.UTF8))
+            {
+                sw.WriteLine(drink.ToString());
+            }
+            return "Drink added successfully";
         }
     }
 }
