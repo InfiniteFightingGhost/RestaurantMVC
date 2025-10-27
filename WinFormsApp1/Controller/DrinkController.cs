@@ -30,6 +30,10 @@ namespace WinFormsApp1.Controller
             }
             return drinks;
         }
+        public List<string> PrintAllDrinkTypes()
+        {
+            return AllDrinks.Drinks.Select(d => $"{d.GetType().Name}|{d.Name}").ToList();
+        }
         public string ChangeDrinkInfo(string name, string newInfo, string property)
         {
             Drink drink = AllDrinks.Drinks.FirstOrDefault(x => x.Name == name);
