@@ -55,6 +55,8 @@ namespace WinFormsApp1
 
         private void button17_Click(object sender, EventArgs e)
         {
+            drinkControl.AllDrinks.AddDrinkToFile();
+            foodControl.allFood.WriteFoodsToFile();
             Close();
         }
 
@@ -62,13 +64,27 @@ namespace WinFormsApp1
 
         private void button18_Click(object sender, EventArgs e)
         {
-            string name = textBox1.Text;
-            double price = double.Parse(textBox2.Text);
-            int amount = int.Parse(textBox3.Text);
-            if(radioButton1.Checked)
+            string name = textBox3.Text;
+            double price = double.Parse(textBox4.Text);
+            int amount = int.Parse(textBox5.Text);
+            textBox3.Text = "";
+            textBox4.Text = "";
+            textBox5.Text = "";
+            if (radioButton1.Checked)
             {
-                SoftDrink drink = new SoftDrink(name, price, amount);
+                drinkControl.AddSoftDrink(name, price, amount);
             }
+            else if (radioButton2.Checked)
+            {
+                double percent = double.Parse(textBox6.Text);
+                textBox6.Text = "";
+                drinkControl.AddAlcoholicDrink(name, price, amount, percent);
+            }
+        }
+
+        private void button10_Click(object sender, EventArgs e)
+        {
+            tabGroup.SelectTab(AddDrink);
         }
     }
 }
