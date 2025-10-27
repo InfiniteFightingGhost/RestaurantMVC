@@ -26,8 +26,9 @@ namespace WinFormsApp1.Model
         public bool Is_Vegan { get; set; }
         public override string ToString()
         {
-            return $"{Name}\nPrice: {Price}bgn.\nIngredients: {string.Join(";",Ingredients)}\nAllergens: {string.Join(";", Allergens)}\nAdd ons: {string.Join(";", AddOns)}\nVegan: {Is_Vegan}";
+            return $"{this.GetType().Name}|{Name}|{Price}|Ingredients: {string.Join(";",Ingredients)}|Allergens: {string.Join(";", Allergens)}|Add ons: {string.Join(";", AddOns)}|Vegan: {Is_Vegan}";
         }
+
 
     }
 }
