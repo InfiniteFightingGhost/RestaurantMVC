@@ -1,12 +1,19 @@
+using WinFormsApp1.Controller;
+using WinFormsApp1.Model;
+
 namespace WinFormsApp1
 {
     public partial class Form1 : Form
     {
+        FoodController foodControl;
+        DrinkController drinkControl;
         public Form1()
         {
             InitializeComponent();
             panel2.Visible = false;
             panel3.Visible = false;
+            foodControl = new FoodController();
+            drinkControl = new DrinkController();
         }
 
         private void button2_Click(object sender, EventArgs e)
@@ -49,6 +56,19 @@ namespace WinFormsApp1
         private void button17_Click(object sender, EventArgs e)
         {
             Close();
+        }
+
+        private void label2_Click(object sender, EventArgs e) { }
+
+        private void button18_Click(object sender, EventArgs e)
+        {
+            string name = textBox1.Text;
+            double price = double.Parse(textBox2.Text);
+            int amount = int.Parse(textBox3.Text);
+            if(radioButton1.Checked)
+            {
+                SoftDrink drink = new SoftDrink(name, price, amount);
+            }
         }
     }
 }

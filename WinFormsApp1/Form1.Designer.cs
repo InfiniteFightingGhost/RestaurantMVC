@@ -48,13 +48,31 @@
             button12 = new Button();
             button11 = new Button();
             button10 = new Button();
-            tabControl1 = new TabControl();
-            tabPage1 = new TabPage();
-            tabPage2 = new TabPage();
+            tabGroup = new TabControl();
+            MainMenu = new TabPage();
+            AddFood = new TabPage();
+            textBox2 = new TextBox();
+            textBox1 = new TextBox();
+            AddDrink = new TabPage();
+            groupBox1 = new GroupBox();
+            label1 = new Label();
+            label2 = new Label();
+            label3 = new Label();
+            label4 = new Label();
+            textBox3 = new TextBox();
+            textBox4 = new TextBox();
+            textBox5 = new TextBox();
+            textBox6 = new TextBox();
+            radioButton1 = new RadioButton();
+            radioButton2 = new RadioButton();
+            button18 = new Button();
             panel1.SuspendLayout();
             panel2.SuspendLayout();
             panel3.SuspendLayout();
-            tabControl1.SuspendLayout();
+            tabGroup.SuspendLayout();
+            AddFood.SuspendLayout();
+            AddDrink.SuspendLayout();
+            groupBox1.SuspendLayout();
             SuspendLayout();
             // 
             // panel1
@@ -254,42 +272,196 @@
             button10.Text = "Add drink";
             button10.UseVisualStyleBackColor = true;
             // 
-            // tabControl1
+            // tabGroup
             // 
-            tabControl1.Controls.Add(tabPage1);
-            tabControl1.Controls.Add(tabPage2);
-            tabControl1.Location = new Point(207, 6);
-            tabControl1.Name = "tabControl1";
-            tabControl1.SelectedIndex = 0;
-            tabControl1.Size = new Size(1054, 719);
-            tabControl1.TabIndex = 3;
+            tabGroup.Controls.Add(MainMenu);
+            tabGroup.Controls.Add(AddFood);
+            tabGroup.Controls.Add(AddDrink);
+            tabGroup.Location = new Point(207, 6);
+            tabGroup.Name = "tabGroup";
+            tabGroup.SelectedIndex = 0;
+            tabGroup.Size = new Size(1054, 719);
+            tabGroup.TabIndex = 3;
             // 
-            // tabPage1
+            // MainMenu
             // 
-            tabPage1.Location = new Point(4, 29);
-            tabPage1.Name = "tabPage1";
-            tabPage1.Padding = new Padding(3);
-            tabPage1.Size = new Size(1046, 686);
-            tabPage1.TabIndex = 0;
-            tabPage1.Text = "tabPage1";
-            tabPage1.UseVisualStyleBackColor = true;
+            MainMenu.Location = new Point(4, 29);
+            MainMenu.Name = "MainMenu";
+            MainMenu.Padding = new Padding(3);
+            MainMenu.Size = new Size(1046, 686);
+            MainMenu.TabIndex = 0;
+            MainMenu.Text = "MainMenu";
+            MainMenu.UseVisualStyleBackColor = true;
             // 
-            // tabPage2
+            // AddFood
             // 
-            tabPage2.Location = new Point(4, 29);
-            tabPage2.Name = "tabPage2";
-            tabPage2.Padding = new Padding(3);
-            tabPage2.Size = new Size(1046, 686);
-            tabPage2.TabIndex = 1;
-            tabPage2.Text = "tabPage2";
-            tabPage2.UseVisualStyleBackColor = true;
+            AddFood.Controls.Add(textBox2);
+            AddFood.Controls.Add(textBox1);
+            AddFood.Location = new Point(4, 29);
+            AddFood.Name = "AddFood";
+            AddFood.Padding = new Padding(3);
+            AddFood.Size = new Size(1046, 686);
+            AddFood.TabIndex = 1;
+            AddFood.Text = "AddFood";
+            AddFood.UseVisualStyleBackColor = true;
+            // 
+            // textBox2
+            // 
+            textBox2.Location = new Point(76, 56);
+            textBox2.Name = "textBox2";
+            textBox2.Size = new Size(124, 27);
+            textBox2.TabIndex = 1;
+            // 
+            // textBox1
+            // 
+            textBox1.Location = new Point(75, 21);
+            textBox1.Name = "textBox1";
+            textBox1.Size = new Size(125, 27);
+            textBox1.TabIndex = 0;
+            // 
+            // AddDrink
+            // 
+            AddDrink.Controls.Add(button18);
+            AddDrink.Controls.Add(textBox6);
+            AddDrink.Controls.Add(textBox5);
+            AddDrink.Controls.Add(textBox4);
+            AddDrink.Controls.Add(textBox3);
+            AddDrink.Controls.Add(label4);
+            AddDrink.Controls.Add(label3);
+            AddDrink.Controls.Add(label2);
+            AddDrink.Controls.Add(groupBox1);
+            AddDrink.Controls.Add(label1);
+            AddDrink.Location = new Point(4, 29);
+            AddDrink.Name = "AddDrink";
+            AddDrink.Padding = new Padding(3);
+            AddDrink.Size = new Size(1046, 686);
+            AddDrink.TabIndex = 2;
+            AddDrink.Text = "AddDrink";
+            AddDrink.UseVisualStyleBackColor = true;
+            // 
+            // groupBox1
+            // 
+            groupBox1.Controls.Add(radioButton2);
+            groupBox1.Controls.Add(radioButton1);
+            groupBox1.Font = new Font("Segoe UI", 16.2F, FontStyle.Regular, GraphicsUnit.Point, 204);
+            groupBox1.Location = new Point(29, 274);
+            groupBox1.Name = "groupBox1";
+            groupBox1.Size = new Size(250, 141);
+            groupBox1.TabIndex = 3;
+            groupBox1.TabStop = false;
+            groupBox1.Text = "Type of beverage:";
+            // 
+            // label1
+            // 
+            label1.AutoSize = true;
+            label1.Font = new Font("Segoe UI", 18F, FontStyle.Regular, GraphicsUnit.Point, 204);
+            label1.Location = new Point(29, 38);
+            label1.Name = "label1";
+            label1.Size = new Size(177, 41);
+            label1.TabIndex = 0;
+            label1.Text = "Drink name:";
+            // 
+            // label2
+            // 
+            label2.AutoSize = true;
+            label2.Font = new Font("Segoe UI", 18F, FontStyle.Regular, GraphicsUnit.Point, 204);
+            label2.Location = new Point(29, 90);
+            label2.Name = "label2";
+            label2.Size = new Size(168, 41);
+            label2.TabIndex = 4;
+            label2.Text = "Drink price:";
+            // 
+            // label3
+            // 
+            label3.AutoSize = true;
+            label3.Font = new Font("Segoe UI", 18F, FontStyle.Regular, GraphicsUnit.Point, 204);
+            label3.Location = new Point(29, 137);
+            label3.Name = "label3";
+            label3.Size = new Size(206, 41);
+            label3.TabIndex = 5;
+            label3.Text = "Drink amount:";
+            // 
+            // label4
+            // 
+            label4.AutoSize = true;
+            label4.Font = new Font("Segoe UI", 18F, FontStyle.Regular, GraphicsUnit.Point, 204);
+            label4.Location = new Point(29, 194);
+            label4.Name = "label4";
+            label4.Size = new Size(158, 41);
+            label4.TabIndex = 6;
+            label4.Text = "Alcohol %:";
+            // 
+            // textBox3
+            // 
+            textBox3.Font = new Font("Segoe UI", 16.2F, FontStyle.Regular, GraphicsUnit.Point, 204);
+            textBox3.Location = new Point(260, 36);
+            textBox3.Name = "textBox3";
+            textBox3.Size = new Size(259, 43);
+            textBox3.TabIndex = 7;
+            // 
+            // textBox4
+            // 
+            textBox4.Font = new Font("Segoe UI", 16.2F, FontStyle.Regular, GraphicsUnit.Point, 204);
+            textBox4.Location = new Point(260, 85);
+            textBox4.Name = "textBox4";
+            textBox4.Size = new Size(259, 43);
+            textBox4.TabIndex = 8;
+            // 
+            // textBox5
+            // 
+            textBox5.Font = new Font("Segoe UI", 16.2F, FontStyle.Regular, GraphicsUnit.Point, 204);
+            textBox5.Location = new Point(260, 137);
+            textBox5.Name = "textBox5";
+            textBox5.Size = new Size(259, 43);
+            textBox5.TabIndex = 9;
+            // 
+            // textBox6
+            // 
+            textBox6.Font = new Font("Segoe UI", 16.2F, FontStyle.Regular, GraphicsUnit.Point, 204);
+            textBox6.Location = new Point(260, 192);
+            textBox6.Name = "textBox6";
+            textBox6.Size = new Size(259, 43);
+            textBox6.TabIndex = 10;
+            // 
+            // radioButton1
+            // 
+            radioButton1.AutoSize = true;
+            radioButton1.Location = new Point(6, 37);
+            radioButton1.Name = "radioButton1";
+            radioButton1.Size = new Size(158, 42);
+            radioButton1.TabIndex = 0;
+            radioButton1.TabStop = true;
+            radioButton1.Text = "Soft drink";
+            radioButton1.UseVisualStyleBackColor = true;
+            // 
+            // radioButton2
+            // 
+            radioButton2.AutoSize = true;
+            radioButton2.Location = new Point(6, 83);
+            radioButton2.Name = "radioButton2";
+            radioButton2.Size = new Size(222, 42);
+            radioButton2.TabIndex = 1;
+            radioButton2.TabStop = true;
+            radioButton2.Text = "Alcoholic drink";
+            radioButton2.UseVisualStyleBackColor = true;
+            // 
+            // button18
+            // 
+            button18.Font = new Font("Segoe UI", 24F, FontStyle.Regular, GraphicsUnit.Point, 204);
+            button18.Location = new Point(358, 294);
+            button18.Name = "button18";
+            button18.Size = new Size(122, 105);
+            button18.TabIndex = 11;
+            button18.Text = "Add";
+            button18.UseVisualStyleBackColor = true;
+            button18.Click += button18_Click;
             // 
             // Form1
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(1273, 737);
-            Controls.Add(tabControl1);
+            Controls.Add(tabGroup);
             Controls.Add(panel3);
             Controls.Add(panel2);
             Controls.Add(panel1);
@@ -298,7 +470,13 @@
             panel1.ResumeLayout(false);
             panel2.ResumeLayout(false);
             panel3.ResumeLayout(false);
-            tabControl1.ResumeLayout(false);
+            tabGroup.ResumeLayout(false);
+            AddFood.ResumeLayout(false);
+            AddFood.PerformLayout();
+            AddDrink.ResumeLayout(false);
+            AddDrink.PerformLayout();
+            groupBox1.ResumeLayout(false);
+            groupBox1.PerformLayout();
             ResumeLayout(false);
         }
 
@@ -323,9 +501,24 @@
         private Button button16;
         private Button button15;
         private Button button14;
-        private TabControl tabControl1;
-        private TabPage tabPage1;
-        private TabPage tabPage2;
+        private TabControl tabGroup;
+        private TabPage MainMenu;
+        private TabPage AddFood;
         private Button button17;
+        private TextBox textBox2;
+        private TextBox textBox1;
+        private TabPage AddDrink;
+        private GroupBox groupBox1;
+        private Label label1;
+        private Button button18;
+        private TextBox textBox6;
+        private TextBox textBox5;
+        private TextBox textBox4;
+        private TextBox textBox3;
+        private Label label4;
+        private Label label3;
+        private Label label2;
+        private RadioButton radioButton2;
+        private RadioButton radioButton1;
     }
 }
