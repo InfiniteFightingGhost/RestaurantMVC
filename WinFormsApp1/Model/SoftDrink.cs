@@ -8,8 +8,6 @@ namespace WinFormsApp1.Model
 {
     public class SoftDrink : Drink
     {
-        public SoftDrink(string name, double price, int milliliters) : base(name, price, milliliters)
-        {
-        }
+        public SoftDrink(string name, double price, int milliliters) : base(name, price, milliliters) { }
     }
 }
