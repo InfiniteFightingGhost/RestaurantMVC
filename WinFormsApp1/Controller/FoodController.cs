@@ -15,9 +15,19 @@ namespace WinFormsApp1.Controller
         {
             allFood = new AllFood();
         }
-        public string AddFood(Food food)
-        { 
-            allFood.Foods.Add(food);
+        public string AddFood(string name, double price, List<string> allergens, List<string> ingredients,
+            List<string> addOns, bool is_vegeterian, string type)
+        {
+            Food food = null;
+            switch(type)
+            {
+                case "Appetizer":
+                    food = new Appetizer(name, price, is_vegeterian);
+                    break;
+            }
+            food.Allergens = allergens;
+            food.AddOns = addOns;
+            food.Ingredients = ingredients;
             return "Food was added successfully!";
         }
         public string DeleteFood(string name)

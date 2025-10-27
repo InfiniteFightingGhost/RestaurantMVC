@@ -86,5 +86,37 @@ namespace WinFormsApp1
         {
             tabGroup.SelectTab(AddDrink);
         }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+            tabGroup.SelectTab(AddFood);
+        }
+
+        private void button19_Click(object sender, EventArgs e)
+        {
+            string name = textBox1.Text;
+            double price = double.Parse(textBox2.Text);
+            List<string> allergens = textBox7.Text.Split(";").ToList();
+            List<string> ingredients = textBox7.Text.Split(";").ToList();
+            List<string> addOns = new List<string>();
+            bool is_vegetarian = false;
+            if (checkBox1.Checked)
+                addOns.Add("Extra meat");
+            if (checkBox2.Checked)
+                addOns.Add("Extra sauce");
+            if (checkBox3.Checked)
+                addOns.Add("Extra veg");
+            if (radioButton3.Checked)
+                is_vegetarian = true;
+            else if(radioButton4.Checked)
+                is_vegetarian = false;
+            if(radioButton5.Checked)
+            {
+                Appetizer appetizer = new Appetizer(name, price, is_vegetarian);
+                appetizer.Allergens = allergens;
+                appetizer.AddOns = addOns;
+                appetizer.Ingredients = ingredients;
+            }
+        }
     }
 }
