@@ -15,7 +15,7 @@
 
         public override string ToString()
         {
-            return $"Name: {Name} \nPrice: {Price} \nML: {Milliliters}";
+            return $"{this.GetType().Name}|{Name}|{Price}|{Milliliters}";
         }
     }
 }
