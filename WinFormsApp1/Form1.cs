@@ -15,17 +15,7 @@ namespace WinFormsApp1
             foodControl = new FoodController();
             drinkControl = new DrinkController();
             tabGroup.SelectTab(MainMenu);
-            listBox8.Items.Add("Foods:");
-            foreach (string item in foodControl.ListAllFoodTypes())
-            {
-                listBox8.Items.Add(item);
-            }
-            listBox8.Items.Add("");
-            listBox8.Items.Add("Drinks:");
-            foreach (string item in drinkControl.PrintAllDrinkTypes())
-            {
-                listBox8.Items.Add(item);
-            }
+            RenderMenu();
         }
 
         private void button2_Click(object sender, EventArgs e)
@@ -273,14 +263,33 @@ namespace WinFormsApp1
         {
             tabGroup.SelectTab(MainMenu);
             listBox8.Items.Clear();
-            listBox8.Items.Add("Foods:");
-            foreach (string item in foodControl.ListAllFoodTypes())
+            RenderMenu();
+        }
+        private void RenderMenu()
+        {
+            listBox8.Items.Add("Appetizers:");
+            foreach (string item in foodControl.ListAllAppetizers())
+            {
+                listBox8.Items.Add(item);
+            }
+            listBox8.Items.Add("Main courses:");
+            foreach (string item in foodControl.ListAllMainCourses())
+            {
+                listBox8.Items.Add(item);
+            }
+            listBox8.Items.Add("Desserts:");
+            foreach (string item in foodControl.ListAllDesserts())
             {
                 listBox8.Items.Add(item);
             }
             listBox8.Items.Add("");
-            listBox8.Items.Add("Drinks:");
-            foreach (string item in drinkControl.PrintAllDrinkTypes())
+            listBox8.Items.Add("Soft drinks:");
+            foreach (string item in drinkControl.ReadSoftDrinksList())
+            {
+                listBox8.Items.Add(item);
+            }
+            listBox8.Items.Add("Alcoholic drinks:");
+            foreach (string item in drinkControl.ReadAlcoholicDrinksList())
             {
                 listBox8.Items.Add(item);
             }
