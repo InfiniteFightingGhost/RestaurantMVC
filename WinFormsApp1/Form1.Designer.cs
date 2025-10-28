@@ -139,6 +139,7 @@
             label1 = new Label();
             panel5 = new Panel();
             panel4 = new Panel();
+            listBox8 = new ListBox();
             panel1.SuspendLayout();
             panel2.SuspendLayout();
             panel3.SuspendLayout();
@@ -467,14 +468,15 @@
             // MainMenu
             // 
             MainMenu.BackColor = Color.DarkGray;
+            MainMenu.Controls.Add(listBox8);
             MainMenu.Controls.Add(label13);
             MainMenu.Controls.Add(label12);
-            MainMenu.Location = new Point(4, 29);
+            MainMenu.Location = new Point(4, 26);
             MainMenu.Name = "MainMenu";
             MainMenu.Padding = new Padding(3);
-            MainMenu.Size = new Size(934, 593);
+            MainMenu.Size = new Size(934, 596);
             MainMenu.TabIndex = 0;
-            MainMenu.Text = "MainMenu";
+            MainMenu.Text = " ";
             // 
             // label13
             // 
@@ -642,10 +644,10 @@
             // 
             ListAllFood.BackColor = Color.DarkGray;
             ListAllFood.Controls.Add(listBox4);
-            ListAllFood.Location = new Point(4, 26);
+            ListAllFood.Location = new Point(4, 29);
             ListAllFood.Name = "ListAllFood";
             ListAllFood.Padding = new Padding(3);
-            ListAllFood.Size = new Size(934, 596);
+            ListAllFood.Size = new Size(934, 593);
             ListAllFood.TabIndex = 5;
             ListAllFood.Text = "List all foods";
             // 
@@ -690,10 +692,10 @@
             // 
             ListAllMainCourses.BackColor = Color.DarkGray;
             ListAllMainCourses.Controls.Add(listBox6);
-            ListAllMainCourses.Location = new Point(4, 26);
+            ListAllMainCourses.Location = new Point(4, 29);
             ListAllMainCourses.Name = "ListAllMainCourses";
             ListAllMainCourses.Padding = new Padding(3);
-            ListAllMainCourses.Size = new Size(934, 596);
+            ListAllMainCourses.Size = new Size(934, 593);
             ListAllMainCourses.TabIndex = 7;
             ListAllMainCourses.Text = "List all main courses";
             // 
@@ -786,10 +788,10 @@
             ChangeInfoDrink.Controls.Add(label16);
             ChangeInfoDrink.Controls.Add(textBox10);
             ChangeInfoDrink.Controls.Add(label15);
-            ChangeInfoDrink.Location = new Point(4, 29);
+            ChangeInfoDrink.Location = new Point(4, 26);
             ChangeInfoDrink.Name = "ChangeInfoDrink";
             ChangeInfoDrink.Padding = new Padding(3);
-            ChangeInfoDrink.Size = new Size(934, 593);
+            ChangeInfoDrink.Size = new Size(934, 596);
             ChangeInfoDrink.TabIndex = 11;
             ChangeInfoDrink.Text = "Change info of Drink";
             // 
@@ -911,10 +913,10 @@
             // 
             ListAllSoftDrinks.BackColor = Color.DarkGray;
             ListAllSoftDrinks.Controls.Add(listBox2);
-            ListAllSoftDrinks.Location = new Point(4, 26);
+            ListAllSoftDrinks.Location = new Point(4, 29);
             ListAllSoftDrinks.Name = "ListAllSoftDrinks";
             ListAllSoftDrinks.Padding = new Padding(3);
-            ListAllSoftDrinks.Size = new Size(934, 596);
+            ListAllSoftDrinks.Size = new Size(934, 593);
             ListAllSoftDrinks.TabIndex = 12;
             ListAllSoftDrinks.Text = "List all soft drinks";
             // 
@@ -935,10 +937,10 @@
             // 
             ListAllAlcoholicDrinks.BackColor = Color.DarkGray;
             ListAllAlcoholicDrinks.Controls.Add(listBox3);
-            ListAllAlcoholicDrinks.Location = new Point(4, 26);
+            ListAllAlcoholicDrinks.Location = new Point(4, 29);
             ListAllAlcoholicDrinks.Name = "ListAllAlcoholicDrinks";
             ListAllAlcoholicDrinks.Padding = new Padding(3);
-            ListAllAlcoholicDrinks.Size = new Size(934, 596);
+            ListAllAlcoholicDrinks.Size = new Size(934, 593);
             ListAllAlcoholicDrinks.TabIndex = 13;
             ListAllAlcoholicDrinks.Text = "List all alcoholic drinks";
             // 
@@ -1377,14 +1379,27 @@
             panel4.Size = new Size(954, 29);
             panel4.TabIndex = 6;
             // 
+            // listBox8
+            // 
+            listBox8.BackColor = SystemColors.GrayText;
+            listBox8.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point, 204);
+            listBox8.ForeColor = SystemColors.Window;
+            listBox8.FormattingEnabled = true;
+            listBox8.HorizontalScrollbar = true;
+            listBox8.ItemHeight = 28;
+            listBox8.Location = new Point(73, 184);
+            listBox8.Name = "listBox8";
+            listBox8.Size = new Size(789, 368);
+            listBox8.TabIndex = 3;
+            // 
             // Form1
             // 
             AutoScaleDimensions = new SizeF(7F, 17F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(1119, 616);
             ControlBox = false;
-            Controls.Add(panel5);
             Controls.Add(panel4);
+            Controls.Add(panel5);
             Controls.Add(tabGroup);
             Controls.Add(panel3);
             Controls.Add(panel2);
@@ -1546,5 +1561,6 @@
         private Panel panel5;
         private Label label22;
         private Panel panel4;
+        private ListBox listBox8;
     }
 }

@@ -15,6 +15,17 @@ namespace WinFormsApp1
             foodControl = new FoodController();
             drinkControl = new DrinkController();
             tabGroup.SelectTab(MainMenu);
+            listBox8.Items.Add("Foods:");
+            foreach (string item in foodControl.ListAllFoodTypes())
+            {
+                listBox8.Items.Add(item);
+            }
+            listBox8.Items.Add("");
+            listBox8.Items.Add("Drinks:");
+            foreach (string item in drinkControl.PrintAllDrinkTypes())
+            {
+                listBox8.Items.Add(item);
+            }
         }
 
         private void button2_Click(object sender, EventArgs e)
@@ -261,6 +272,18 @@ namespace WinFormsApp1
         private void button1_Click(object sender, EventArgs e)
         {
             tabGroup.SelectTab(MainMenu);
+            listBox8.Items.Clear();
+            listBox8.Items.Add("Foods:");
+            foreach (string item in foodControl.ListAllFoodTypes())
+            {
+                listBox8.Items.Add(item);
+            }
+            listBox8.Items.Add("");
+            listBox8.Items.Add("Drinks:");
+            foreach (string item in drinkControl.PrintAllDrinkTypes())
+            {
+                listBox8.Items.Add(item);
+            }
         }
 
         private void label4_Click(object sender, EventArgs e) { }
