@@ -11,6 +11,7 @@ namespace WinFormsApp1.Model
         public AllFood()
         {
             Foods = new List<Food>();
+            ReadFoodsFromFile();
         }
         public List<Food> Foods { get; set; }
         public void WriteFoodsToFile()
@@ -18,7 +19,7 @@ namespace WinFormsApp1.Model
             StreamWriter writer = new StreamWriter("foods.txt", false, Encoding.UTF8);
             using (writer)
             {
-                writer.Write(string.Join("\n", Foods));
+                writer.Write(string.Join("\n", Foods.Select(a => a.ToFile())));
             }
         }
         public void ReadFoodsFromFile()
@@ -61,6 +62,7 @@ namespace WinFormsApp1.Model
                             Foods.Add(dessert);
                             break;
                     }
+                    lines = reader.ReadLine();
                 }
             }
         }

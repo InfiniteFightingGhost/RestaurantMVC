@@ -15,6 +15,10 @@
 
         public override string ToString()
         {
+            return $"{this.GetType().Name} {Name} {Price} {Milliliters}ml";
+        }
+        public virtual string ToFile()
+        {
             return $"{this.GetType().Name}|{Name}|{Price}|{Milliliters}ml";
         }
     }

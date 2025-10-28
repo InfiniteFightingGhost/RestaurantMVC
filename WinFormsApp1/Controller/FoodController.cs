@@ -24,10 +24,17 @@ namespace WinFormsApp1.Controller
                 case "Appetizer":
                     food = new Appetizer(name, price, is_vegeterian);
                     break;
+                case "MainCourse":
+                    food = new MainCourse(name, price, is_vegeterian);
+                    break;
+                case "Dessert":
+                    food = new Dessert(name, price, is_vegeterian);
+                    break;
             }
             food.Allergens = allergens;
             food.AddOns = addOns;
             food.Ingredients = ingredients;
+            allFood.Foods.Add(food);
             return "Food was added successfully!";
         }
         public string DeleteFood(string name)

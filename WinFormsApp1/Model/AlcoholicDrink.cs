@@ -16,7 +16,11 @@ namespace WinFormsApp1.Model
 
         public override string ToString()
         {
-            return base.ToString() + $"|{PercentAlcohol:f1}%";
+            return base.ToString() + $" {PercentAlcohol:f1}%";
+        }
+        public override string ToFile()
+        {
+            return base.ToFile() + $"|{PercentAlcohol:f1}%";
         }
     }
 }

@@ -19,7 +19,7 @@ namespace WinFormsApp1.Model
                 while ((line = sr.ReadLine()) != null)
                 {
                     string[] parts = line.Split('|');
-                    if (parts.Length > 3 && parts[3].Contains('%'))
+                    if (parts[0] == "AlcoholicDrink")
                     {
                         string name = parts[1];
                         double price = double.Parse(parts[2]);
@@ -44,7 +44,7 @@ namespace WinFormsApp1.Model
             {
                 foreach(var drink in Drinks)
                 {
-                    sw.WriteLine(drink.ToString());
+                    sw.WriteLine(drink.ToFile());
                 }
             }
             return "Drinks added successfully";

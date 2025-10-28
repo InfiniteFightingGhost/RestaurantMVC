@@ -8,6 +8,7 @@ namespace WinFormsApp1.Controller
         public DrinkController()
         {
             AllDrinks = new AllDrink();
+            AllDrinks.AddDrinksFromFile();
         }
         public AllDrink AllDrinks { get; set; }
 
@@ -32,7 +33,7 @@ namespace WinFormsApp1.Controller
         }
         public List<string> PrintAllDrinkTypes()
         {
-            return AllDrinks.Drinks.Select(d => $"{d.GetType().Name}|{d.Name}").ToList();
+            return AllDrinks.Drinks.Select(d => $"{d.GetType().Name} - {d.Name}").ToList();
         }
         public string ChangeDrinkInfo(string name, string newInfo, string property)
         {
