@@ -273,8 +273,8 @@ namespace WinFormsApp1
         {
             tabGroup.SelectTab(MainMenu);
             listBox8.Items.Clear();
-            listBox8.Items.Add("Foods:");
-            foreach (string item in foodControl.ListAllFoodTypes())
+            listBox8.Items.Add("Appetizers:");
+            foreach (string item in foodControl.ListAllAppetizers())
             {
                 listBox8.Items.Add(item);
             }
