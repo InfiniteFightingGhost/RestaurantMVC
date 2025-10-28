@@ -49,6 +49,12 @@
             button11 = new Button();
             button10 = new Button();
             tabGroup = new TabControl();
+            ListAllDrinks = new TabPage();
+            listBox1 = new ListBox();
+            DeleteFood = new TabPage();
+            button22 = new Button();
+            textBox12 = new TextBox();
+            label18 = new Label();
             MainMenu = new TabPage();
             label13 = new Label();
             label12 = new Label();
@@ -77,8 +83,6 @@
             button20 = new Button();
             textBox9 = new TextBox();
             label14 = new Label();
-            ListAllDrinks = new TabPage();
-            listBox1 = new ListBox();
             ChangeInfoDrink = new TabPage();
             button21 = new Button();
             groupBox5 = new GroupBox();
@@ -119,11 +123,8 @@
             label7 = new Label();
             label6 = new Label();
             label5 = new Label();
-            DeleteFood = new TabPage();
-            button22 = new Button();
-            textBox12 = new TextBox();
-            label18 = new Label();
             AddDrink = new TabPage();
+            label22 = new Label();
             button18 = new Button();
             textBox6 = new TextBox();
             textBox5 = new TextBox();
@@ -136,12 +137,14 @@
             radioButton2 = new RadioButton();
             radioButton1 = new RadioButton();
             label1 = new Label();
-            panel4 = new Panel();
             panel5 = new Panel();
+            panel4 = new Panel();
             panel1.SuspendLayout();
             panel2.SuspendLayout();
             panel3.SuspendLayout();
             tabGroup.SuspendLayout();
+            ListAllDrinks.SuspendLayout();
+            DeleteFood.SuspendLayout();
             MainMenu.SuspendLayout();
             ChangeInfoFood.SuspendLayout();
             groupBox6.SuspendLayout();
@@ -150,7 +153,6 @@
             ListAllMainCourses.SuspendLayout();
             ListAllDesserts.SuspendLayout();
             DeleteDrink.SuspendLayout();
-            ListAllDrinks.SuspendLayout();
             ChangeInfoDrink.SuspendLayout();
             groupBox5.SuspendLayout();
             ListAllSoftDrinks.SuspendLayout();
@@ -159,7 +161,6 @@
             groupBox4.SuspendLayout();
             groupBox3.SuspendLayout();
             groupBox2.SuspendLayout();
-            DeleteFood.SuspendLayout();
             AddDrink.SuspendLayout();
             groupBox1.SuspendLayout();
             SuspendLayout();
@@ -289,6 +290,7 @@
             button5.TabIndex = 1;
             button5.Text = "Delete food";
             button5.UseVisualStyleBackColor = true;
+            button5.Click += button5_Click;
             // 
             // button4
             // 
@@ -376,6 +378,8 @@
             // 
             // tabGroup
             // 
+            tabGroup.Controls.Add(ListAllDrinks);
+            tabGroup.Controls.Add(DeleteFood);
             tabGroup.Controls.Add(MainMenu);
             tabGroup.Controls.Add(ChangeInfoFood);
             tabGroup.Controls.Add(ListAllFood);
@@ -383,28 +387,92 @@
             tabGroup.Controls.Add(ListAllMainCourses);
             tabGroup.Controls.Add(ListAllDesserts);
             tabGroup.Controls.Add(DeleteDrink);
-            tabGroup.Controls.Add(ListAllDrinks);
             tabGroup.Controls.Add(ChangeInfoDrink);
             tabGroup.Controls.Add(ListAllSoftDrinks);
             tabGroup.Controls.Add(ListAllAlcoholicDrinks);
             tabGroup.Controls.Add(AddFood);
-            tabGroup.Controls.Add(DeleteFood);
             tabGroup.Controls.Add(AddDrink);
             tabGroup.Location = new Point(182, -1);
             tabGroup.Name = "tabGroup";
             tabGroup.SelectedIndex = 0;
-            tabGroup.Size = new Size(932, 626);
+            tabGroup.Size = new Size(942, 626);
             tabGroup.TabIndex = 3;
+            // 
+            // ListAllDrinks
+            // 
+            ListAllDrinks.BackColor = Color.DarkGray;
+            ListAllDrinks.Controls.Add(listBox1);
+            ListAllDrinks.Location = new Point(4, 26);
+            ListAllDrinks.Name = "ListAllDrinks";
+            ListAllDrinks.Padding = new Padding(3);
+            ListAllDrinks.Size = new Size(934, 596);
+            ListAllDrinks.TabIndex = 10;
+            ListAllDrinks.Text = "List all drinks";
+            // 
+            // listBox1
+            // 
+            listBox1.BackColor = SystemColors.GrayText;
+            listBox1.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point, 204);
+            listBox1.ForeColor = SystemColors.Window;
+            listBox1.FormattingEnabled = true;
+            listBox1.HorizontalScrollbar = true;
+            listBox1.ItemHeight = 28;
+            listBox1.Location = new Point(68, 30);
+            listBox1.Name = "listBox1";
+            listBox1.Size = new Size(789, 480);
+            listBox1.TabIndex = 0;
+            // 
+            // DeleteFood
+            // 
+            DeleteFood.BackColor = Color.DarkGray;
+            DeleteFood.Controls.Add(button22);
+            DeleteFood.Controls.Add(textBox12);
+            DeleteFood.Controls.Add(label18);
+            DeleteFood.Location = new Point(4, 29);
+            DeleteFood.Name = "DeleteFood";
+            DeleteFood.Padding = new Padding(3);
+            DeleteFood.Size = new Size(934, 593);
+            DeleteFood.TabIndex = 3;
+            DeleteFood.Text = "Delete Food";
+            // 
+            // button22
+            // 
+            button22.Font = new Font("Segoe UI", 24F, FontStyle.Regular, GraphicsUnit.Point, 204);
+            button22.Location = new Point(324, 150);
+            button22.Name = "button22";
+            button22.Size = new Size(180, 89);
+            button22.TabIndex = 15;
+            button22.Text = "Remove";
+            button22.UseVisualStyleBackColor = true;
+            button22.Click += button22_Click;
+            // 
+            // textBox12
+            // 
+            textBox12.Font = new Font("Segoe UI", 16.2F, FontStyle.Regular, GraphicsUnit.Point, 204);
+            textBox12.Location = new Point(378, 82);
+            textBox12.Name = "textBox12";
+            textBox12.Size = new Size(227, 43);
+            textBox12.TabIndex = 14;
+            // 
+            // label18
+            // 
+            label18.AutoSize = true;
+            label18.Font = new Font("Segoe UI", 18F, FontStyle.Regular, GraphicsUnit.Point, 204);
+            label18.Location = new Point(209, 84);
+            label18.Name = "label18";
+            label18.Size = new Size(176, 41);
+            label18.TabIndex = 13;
+            label18.Text = "Food name:";
             // 
             // MainMenu
             // 
             MainMenu.BackColor = Color.DarkGray;
             MainMenu.Controls.Add(label13);
             MainMenu.Controls.Add(label12);
-            MainMenu.Location = new Point(4, 26);
+            MainMenu.Location = new Point(4, 29);
             MainMenu.Name = "MainMenu";
             MainMenu.Padding = new Padding(3);
-            MainMenu.Size = new Size(924, 596);
+            MainMenu.Size = new Size(934, 593);
             MainMenu.TabIndex = 0;
             MainMenu.Text = "MainMenu";
             // 
@@ -440,7 +508,7 @@
             ChangeInfoFood.Location = new Point(4, 29);
             ChangeInfoFood.Name = "ChangeInfoFood";
             ChangeInfoFood.Padding = new Padding(3);
-            ChangeInfoFood.Size = new Size(924, 593);
+            ChangeInfoFood.Size = new Size(934, 593);
             ChangeInfoFood.TabIndex = 4;
             ChangeInfoFood.Text = "Change info of food";
             // 
@@ -574,10 +642,10 @@
             // 
             ListAllFood.BackColor = Color.DarkGray;
             ListAllFood.Controls.Add(listBox4);
-            ListAllFood.Location = new Point(4, 29);
+            ListAllFood.Location = new Point(4, 26);
             ListAllFood.Name = "ListAllFood";
             ListAllFood.Padding = new Padding(3);
-            ListAllFood.Size = new Size(924, 593);
+            ListAllFood.Size = new Size(934, 596);
             ListAllFood.TabIndex = 5;
             ListAllFood.Text = "List all foods";
             // 
@@ -585,7 +653,9 @@
             // 
             listBox4.BackColor = SystemColors.GrayText;
             listBox4.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point, 204);
+            listBox4.ForeColor = SystemColors.Window;
             listBox4.FormattingEnabled = true;
+            listBox4.HorizontalScrollbar = true;
             listBox4.ItemHeight = 28;
             listBox4.Location = new Point(68, 30);
             listBox4.Name = "listBox4";
@@ -596,10 +666,10 @@
             // 
             ListAllAppetizers.BackColor = Color.DarkGray;
             ListAllAppetizers.Controls.Add(listBox5);
-            ListAllAppetizers.Location = new Point(4, 29);
+            ListAllAppetizers.Location = new Point(4, 26);
             ListAllAppetizers.Name = "ListAllAppetizers";
             ListAllAppetizers.Padding = new Padding(3);
-            ListAllAppetizers.Size = new Size(924, 593);
+            ListAllAppetizers.Size = new Size(934, 596);
             ListAllAppetizers.TabIndex = 6;
             ListAllAppetizers.Text = "List all appetizers";
             // 
@@ -607,7 +677,9 @@
             // 
             listBox5.BackColor = SystemColors.GrayText;
             listBox5.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point, 204);
+            listBox5.ForeColor = SystemColors.Window;
             listBox5.FormattingEnabled = true;
+            listBox5.HorizontalScrollbar = true;
             listBox5.ItemHeight = 28;
             listBox5.Location = new Point(68, 30);
             listBox5.Name = "listBox5";
@@ -618,10 +690,10 @@
             // 
             ListAllMainCourses.BackColor = Color.DarkGray;
             ListAllMainCourses.Controls.Add(listBox6);
-            ListAllMainCourses.Location = new Point(4, 29);
+            ListAllMainCourses.Location = new Point(4, 26);
             ListAllMainCourses.Name = "ListAllMainCourses";
             ListAllMainCourses.Padding = new Padding(3);
-            ListAllMainCourses.Size = new Size(924, 593);
+            ListAllMainCourses.Size = new Size(934, 596);
             ListAllMainCourses.TabIndex = 7;
             ListAllMainCourses.Text = "List all main courses";
             // 
@@ -629,7 +701,9 @@
             // 
             listBox6.BackColor = SystemColors.GrayText;
             listBox6.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point, 204);
+            listBox6.ForeColor = SystemColors.Window;
             listBox6.FormattingEnabled = true;
+            listBox6.HorizontalScrollbar = true;
             listBox6.ItemHeight = 28;
             listBox6.Location = new Point(68, 30);
             listBox6.Name = "listBox6";
@@ -640,10 +714,10 @@
             // 
             ListAllDesserts.BackColor = Color.DarkGray;
             ListAllDesserts.Controls.Add(listBox7);
-            ListAllDesserts.Location = new Point(4, 29);
+            ListAllDesserts.Location = new Point(4, 26);
             ListAllDesserts.Name = "ListAllDesserts";
             ListAllDesserts.Padding = new Padding(3);
-            ListAllDesserts.Size = new Size(924, 593);
+            ListAllDesserts.Size = new Size(934, 596);
             ListAllDesserts.TabIndex = 8;
             ListAllDesserts.Text = "List all deserts";
             // 
@@ -651,7 +725,9 @@
             // 
             listBox7.BackColor = SystemColors.GrayText;
             listBox7.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point, 204);
+            listBox7.ForeColor = SystemColors.Window;
             listBox7.FormattingEnabled = true;
+            listBox7.HorizontalScrollbar = true;
             listBox7.ItemHeight = 28;
             listBox7.Location = new Point(68, 30);
             listBox7.Name = "listBox7";
@@ -667,7 +743,7 @@
             DeleteDrink.Location = new Point(4, 29);
             DeleteDrink.Name = "DeleteDrink";
             DeleteDrink.Padding = new Padding(3);
-            DeleteDrink.Size = new Size(924, 593);
+            DeleteDrink.Size = new Size(934, 593);
             DeleteDrink.TabIndex = 9;
             DeleteDrink.Text = "Delete Drink";
             // 
@@ -700,28 +776,6 @@
             label14.TabIndex = 1;
             label14.Text = "Drink name:";
             // 
-            // ListAllDrinks
-            // 
-            ListAllDrinks.BackColor = Color.DarkGray;
-            ListAllDrinks.Controls.Add(listBox1);
-            ListAllDrinks.Location = new Point(4, 29);
-            ListAllDrinks.Name = "ListAllDrinks";
-            ListAllDrinks.Padding = new Padding(3);
-            ListAllDrinks.Size = new Size(924, 593);
-            ListAllDrinks.TabIndex = 10;
-            ListAllDrinks.Text = "List all drinks";
-            // 
-            // listBox1
-            // 
-            listBox1.BackColor = SystemColors.GrayText;
-            listBox1.Font = new Font("Segoe UI", 16.2F, FontStyle.Regular, GraphicsUnit.Point, 204);
-            listBox1.FormattingEnabled = true;
-            listBox1.ItemHeight = 37;
-            listBox1.Location = new Point(75, 28);
-            listBox1.Name = "listBox1";
-            listBox1.Size = new Size(789, 485);
-            listBox1.TabIndex = 0;
-            // 
             // ChangeInfoDrink
             // 
             ChangeInfoDrink.BackColor = Color.DarkGray;
@@ -735,16 +789,16 @@
             ChangeInfoDrink.Location = new Point(4, 29);
             ChangeInfoDrink.Name = "ChangeInfoDrink";
             ChangeInfoDrink.Padding = new Padding(3);
-            ChangeInfoDrink.Size = new Size(924, 593);
+            ChangeInfoDrink.Size = new Size(934, 593);
             ChangeInfoDrink.TabIndex = 11;
             ChangeInfoDrink.Text = "Change info of Drink";
             // 
             // button21
             // 
-            button21.Font = new Font("Segoe UI", 24F, FontStyle.Regular, GraphicsUnit.Point, 204);
-            button21.Location = new Point(224, 161);
+            button21.Font = new Font("Segoe UI", 16.2F, FontStyle.Regular, GraphicsUnit.Point, 204);
+            button21.Location = new Point(213, 159);
             button21.Name = "button21";
-            button21.Size = new Size(235, 89);
+            button21.Size = new Size(235, 91);
             button21.TabIndex = 18;
             button21.Text = "Change info";
             button21.UseVisualStyleBackColor = true;
@@ -759,7 +813,7 @@
             groupBox5.Font = new Font("Segoe UI", 16.2F, FontStyle.Regular, GraphicsUnit.Point, 204);
             groupBox5.Location = new Point(570, 52);
             groupBox5.Name = "groupBox5";
-            groupBox5.Size = new Size(223, 191);
+            groupBox5.Size = new Size(258, 198);
             groupBox5.TabIndex = 16;
             groupBox5.TabStop = false;
             // 
@@ -857,44 +911,48 @@
             // 
             ListAllSoftDrinks.BackColor = Color.DarkGray;
             ListAllSoftDrinks.Controls.Add(listBox2);
-            ListAllSoftDrinks.Location = new Point(4, 29);
+            ListAllSoftDrinks.Location = new Point(4, 26);
             ListAllSoftDrinks.Name = "ListAllSoftDrinks";
             ListAllSoftDrinks.Padding = new Padding(3);
-            ListAllSoftDrinks.Size = new Size(924, 593);
+            ListAllSoftDrinks.Size = new Size(934, 596);
             ListAllSoftDrinks.TabIndex = 12;
             ListAllSoftDrinks.Text = "List all soft drinks";
             // 
             // listBox2
             // 
             listBox2.BackColor = SystemColors.GrayText;
-            listBox2.Font = new Font("Segoe UI", 16.2F, FontStyle.Regular, GraphicsUnit.Point, 204);
+            listBox2.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point, 204);
+            listBox2.ForeColor = SystemColors.Window;
             listBox2.FormattingEnabled = true;
-            listBox2.ItemHeight = 37;
+            listBox2.HorizontalScrollbar = true;
+            listBox2.ItemHeight = 28;
             listBox2.Location = new Point(68, 30);
             listBox2.Name = "listBox2";
-            listBox2.Size = new Size(789, 485);
+            listBox2.Size = new Size(789, 480);
             listBox2.TabIndex = 1;
             // 
             // ListAllAlcoholicDrinks
             // 
             ListAllAlcoholicDrinks.BackColor = Color.DarkGray;
             ListAllAlcoholicDrinks.Controls.Add(listBox3);
-            ListAllAlcoholicDrinks.Location = new Point(4, 29);
+            ListAllAlcoholicDrinks.Location = new Point(4, 26);
             ListAllAlcoholicDrinks.Name = "ListAllAlcoholicDrinks";
             ListAllAlcoholicDrinks.Padding = new Padding(3);
-            ListAllAlcoholicDrinks.Size = new Size(924, 593);
+            ListAllAlcoholicDrinks.Size = new Size(934, 596);
             ListAllAlcoholicDrinks.TabIndex = 13;
             ListAllAlcoholicDrinks.Text = "List all alcoholic drinks";
             // 
             // listBox3
             // 
             listBox3.BackColor = SystemColors.GrayText;
-            listBox3.Font = new Font("Segoe UI", 16.2F, FontStyle.Regular, GraphicsUnit.Point, 204);
+            listBox3.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point, 204);
+            listBox3.ForeColor = SystemColors.Window;
             listBox3.FormattingEnabled = true;
-            listBox3.ItemHeight = 37;
+            listBox3.HorizontalScrollbar = true;
+            listBox3.ItemHeight = 28;
             listBox3.Location = new Point(68, 30);
             listBox3.Name = "listBox3";
-            listBox3.Size = new Size(789, 485);
+            listBox3.Size = new Size(789, 480);
             listBox3.TabIndex = 1;
             // 
             // AddFood
@@ -918,7 +976,7 @@
             AddFood.Location = new Point(4, 29);
             AddFood.Name = "AddFood";
             AddFood.Padding = new Padding(3);
-            AddFood.Size = new Size(924, 593);
+            AddFood.Size = new Size(934, 593);
             AddFood.TabIndex = 1;
             AddFood.Text = "AddFood";
             // 
@@ -930,7 +988,7 @@
             groupBox4.Font = new Font("Segoe UI", 16.2F, FontStyle.Regular, GraphicsUnit.Point, 204);
             groupBox4.Location = new Point(472, 54);
             groupBox4.Name = "groupBox4";
-            groupBox4.Size = new Size(199, 155);
+            groupBox4.Size = new Size(215, 155);
             groupBox4.TabIndex = 14;
             groupBox4.TabStop = false;
             // 
@@ -998,7 +1056,6 @@
             groupBox3.Size = new Size(175, 117);
             groupBox3.TabIndex = 13;
             groupBox3.TabStop = false;
-            groupBox3.Text = "Is vegeterian:";
             // 
             // radioButton4
             // 
@@ -1040,10 +1097,9 @@
             groupBox2.Font = new Font("Segoe UI", 16.2F, FontStyle.Regular, GraphicsUnit.Point, 204);
             groupBox2.Location = new Point(29, 277);
             groupBox2.Name = "groupBox2";
-            groupBox2.Size = new Size(175, 165);
+            groupBox2.Size = new Size(190, 165);
             groupBox2.TabIndex = 12;
             groupBox2.TabStop = false;
-            groupBox2.Text = "Add ons:";
             // 
             // checkBox3
             // 
@@ -1157,51 +1213,10 @@
             label5.TabIndex = 1;
             label5.Text = "Food name:";
             // 
-            // DeleteFood
-            // 
-            DeleteFood.BackColor = Color.DarkGray;
-            DeleteFood.Controls.Add(button22);
-            DeleteFood.Controls.Add(textBox12);
-            DeleteFood.Controls.Add(label18);
-            DeleteFood.Location = new Point(4, 29);
-            DeleteFood.Name = "DeleteFood";
-            DeleteFood.Padding = new Padding(3);
-            DeleteFood.Size = new Size(924, 593);
-            DeleteFood.TabIndex = 3;
-            DeleteFood.Text = "Delete Food";
-            // 
-            // button22
-            // 
-            button22.Font = new Font("Segoe UI", 24F, FontStyle.Regular, GraphicsUnit.Point, 204);
-            button22.Location = new Point(324, 150);
-            button22.Name = "button22";
-            button22.Size = new Size(180, 89);
-            button22.TabIndex = 15;
-            button22.Text = "Remove";
-            button22.UseVisualStyleBackColor = true;
-            button22.Click += button22_Click;
-            // 
-            // textBox12
-            // 
-            textBox12.Font = new Font("Segoe UI", 16.2F, FontStyle.Regular, GraphicsUnit.Point, 204);
-            textBox12.Location = new Point(378, 82);
-            textBox12.Name = "textBox12";
-            textBox12.Size = new Size(227, 43);
-            textBox12.TabIndex = 14;
-            // 
-            // label18
-            // 
-            label18.AutoSize = true;
-            label18.Font = new Font("Segoe UI", 18F, FontStyle.Regular, GraphicsUnit.Point, 204);
-            label18.Location = new Point(209, 84);
-            label18.Name = "label18";
-            label18.Size = new Size(176, 41);
-            label18.TabIndex = 13;
-            label18.Text = "Food name:";
-            // 
             // AddDrink
             // 
             AddDrink.BackColor = Color.DarkGray;
+            AddDrink.Controls.Add(label22);
             AddDrink.Controls.Add(button18);
             AddDrink.Controls.Add(textBox6);
             AddDrink.Controls.Add(textBox5);
@@ -1215,16 +1230,26 @@
             AddDrink.Location = new Point(4, 29);
             AddDrink.Name = "AddDrink";
             AddDrink.Padding = new Padding(3);
-            AddDrink.Size = new Size(924, 593);
+            AddDrink.Size = new Size(934, 593);
             AddDrink.TabIndex = 2;
             AddDrink.Text = "AddDrink";
+            // 
+            // label22
+            // 
+            label22.AutoSize = true;
+            label22.Font = new Font("Segoe UI", 16.2F, FontStyle.Regular, GraphicsUnit.Point, 204);
+            label22.Location = new Point(19, 268);
+            label22.Name = "label22";
+            label22.Size = new Size(236, 38);
+            label22.TabIndex = 12;
+            label22.Text = "Type of beverage:";
             // 
             // button18
             // 
             button18.Font = new Font("Segoe UI", 24F, FontStyle.Regular, GraphicsUnit.Point, 204);
-            button18.Location = new Point(313, 250);
+            button18.Location = new Point(315, 311);
             button18.Name = "button18";
-            button18.Size = new Size(107, 89);
+            button18.Size = new Size(140, 120);
             button18.TabIndex = 11;
             button18.Text = "Add";
             button18.UseVisualStyleBackColor = true;
@@ -1233,7 +1258,7 @@
             // textBox6
             // 
             textBox6.Font = new Font("Segoe UI", 16.2F, FontStyle.Regular, GraphicsUnit.Point, 204);
-            textBox6.Location = new Point(228, 163);
+            textBox6.Location = new Point(228, 214);
             textBox6.Name = "textBox6";
             textBox6.Size = new Size(227, 43);
             textBox6.TabIndex = 10;
@@ -1241,7 +1266,7 @@
             // textBox5
             // 
             textBox5.Font = new Font("Segoe UI", 16.2F, FontStyle.Regular, GraphicsUnit.Point, 204);
-            textBox5.Location = new Point(228, 116);
+            textBox5.Location = new Point(228, 165);
             textBox5.Name = "textBox5";
             textBox5.Size = new Size(227, 43);
             textBox5.TabIndex = 9;
@@ -1249,7 +1274,7 @@
             // textBox4
             // 
             textBox4.Font = new Font("Segoe UI", 16.2F, FontStyle.Regular, GraphicsUnit.Point, 204);
-            textBox4.Location = new Point(228, 72);
+            textBox4.Location = new Point(228, 116);
             textBox4.Name = "textBox4";
             textBox4.Size = new Size(227, 43);
             textBox4.TabIndex = 8;
@@ -1257,7 +1282,7 @@
             // textBox3
             // 
             textBox3.Font = new Font("Segoe UI", 16.2F, FontStyle.Regular, GraphicsUnit.Point, 204);
-            textBox3.Location = new Point(228, 31);
+            textBox3.Location = new Point(228, 67);
             textBox3.Name = "textBox3";
             textBox3.Size = new Size(227, 43);
             textBox3.TabIndex = 7;
@@ -1266,17 +1291,18 @@
             // 
             label4.AutoSize = true;
             label4.Font = new Font("Segoe UI", 18F, FontStyle.Regular, GraphicsUnit.Point, 204);
-            label4.Location = new Point(25, 165);
+            label4.Location = new Point(25, 216);
             label4.Name = "label4";
             label4.Size = new Size(158, 41);
             label4.TabIndex = 6;
             label4.Text = "Alcohol %:";
+            label4.Click += label4_Click;
             // 
             // label3
             // 
             label3.AutoSize = true;
             label3.Font = new Font("Segoe UI", 18F, FontStyle.Regular, GraphicsUnit.Point, 204);
-            label3.Location = new Point(25, 116);
+            label3.Location = new Point(25, 167);
             label3.Name = "label3";
             label3.Size = new Size(206, 41);
             label3.TabIndex = 5;
@@ -1286,7 +1312,7 @@
             // 
             label2.AutoSize = true;
             label2.Font = new Font("Segoe UI", 18F, FontStyle.Regular, GraphicsUnit.Point, 204);
-            label2.Location = new Point(25, 76);
+            label2.Location = new Point(25, 116);
             label2.Name = "label2";
             label2.Size = new Size(168, 41);
             label2.TabIndex = 4;
@@ -1297,12 +1323,11 @@
             groupBox1.Controls.Add(radioButton2);
             groupBox1.Controls.Add(radioButton1);
             groupBox1.Font = new Font("Segoe UI", 16.2F, FontStyle.Regular, GraphicsUnit.Point, 204);
-            groupBox1.Location = new Point(25, 233);
+            groupBox1.Location = new Point(25, 309);
             groupBox1.Name = "groupBox1";
-            groupBox1.Size = new Size(219, 120);
+            groupBox1.Size = new Size(230, 120);
             groupBox1.TabIndex = 3;
             groupBox1.TabStop = false;
-            groupBox1.Text = "Type of beverage:";
             // 
             // radioButton2
             // 
@@ -1318,7 +1343,7 @@
             // radioButton1
             // 
             radioButton1.AutoSize = true;
-            radioButton1.Location = new Point(5, 31);
+            radioButton1.Location = new Point(6, 32);
             radioButton1.Name = "radioButton1";
             radioButton1.Size = new Size(158, 42);
             radioButton1.TabIndex = 0;
@@ -1330,27 +1355,27 @@
             // 
             label1.AutoSize = true;
             label1.Font = new Font("Segoe UI", 18F, FontStyle.Regular, GraphicsUnit.Point, 204);
-            label1.Location = new Point(25, 32);
+            label1.Location = new Point(25, 67);
             label1.Name = "label1";
             label1.Size = new Size(177, 41);
             label1.TabIndex = 0;
             label1.Text = "Drink name:";
-            // 
-            // panel4
-            // 
-            panel4.BackColor = SystemColors.ControlDarkDark;
-            panel4.Location = new Point(173, 0);
-            panel4.Name = "panel4";
-            panel4.Size = new Size(947, 28);
-            panel4.TabIndex = 4;
             // 
             // panel5
             // 
             panel5.BackColor = SystemColors.ControlDarkDark;
             panel5.Location = new Point(170, 0);
             panel5.Name = "panel5";
-            panel5.Size = new Size(16, 642);
+            panel5.Size = new Size(21, 642);
             panel5.TabIndex = 5;
+            // 
+            // panel4
+            // 
+            panel4.BackColor = SystemColors.ControlDarkDark;
+            panel4.Location = new Point(170, 0);
+            panel4.Name = "panel4";
+            panel4.Size = new Size(954, 29);
+            panel4.TabIndex = 6;
             // 
             // Form1
             // 
@@ -1360,10 +1385,10 @@
             ControlBox = false;
             Controls.Add(panel5);
             Controls.Add(panel4);
+            Controls.Add(tabGroup);
             Controls.Add(panel3);
             Controls.Add(panel2);
             Controls.Add(panel1);
-            Controls.Add(tabGroup);
             Font = new Font("Segoe UI", 7.8F, FontStyle.Regular, GraphicsUnit.Point, 204);
             FormBorderStyle = FormBorderStyle.FixedDialog;
             Name = "Form1";
@@ -1372,6 +1397,9 @@
             panel2.ResumeLayout(false);
             panel3.ResumeLayout(false);
             tabGroup.ResumeLayout(false);
+            ListAllDrinks.ResumeLayout(false);
+            DeleteFood.ResumeLayout(false);
+            DeleteFood.PerformLayout();
             MainMenu.ResumeLayout(false);
             MainMenu.PerformLayout();
             ChangeInfoFood.ResumeLayout(false);
@@ -1384,7 +1412,6 @@
             ListAllDesserts.ResumeLayout(false);
             DeleteDrink.ResumeLayout(false);
             DeleteDrink.PerformLayout();
-            ListAllDrinks.ResumeLayout(false);
             ChangeInfoDrink.ResumeLayout(false);
             ChangeInfoDrink.PerformLayout();
             groupBox5.ResumeLayout(false);
@@ -1399,8 +1426,6 @@
             groupBox3.PerformLayout();
             groupBox2.ResumeLayout(false);
             groupBox2.PerformLayout();
-            DeleteFood.ResumeLayout(false);
-            DeleteFood.PerformLayout();
             AddDrink.ResumeLayout(false);
             AddDrink.PerformLayout();
             groupBox1.ResumeLayout(false);
@@ -1518,7 +1543,8 @@
         private Label label20;
         private TextBox textBox14;
         private Label label21;
-        private Panel panel4;
         private Panel panel5;
+        private Label label22;
+        private Panel panel4;
     }
 }
