@@ -102,6 +102,12 @@ namespace WinFormsApp1.Controller
         {
             return allFood.Foods.Where(x => x is Dessert).Select(x => x.ToString()).ToArray();
         }
-
+        public string[] ListBetweenPrices(double minPrice, double MaxPrice)
+        {
+            return allFood.Foods
+                .Where(x => x.Price >= minPrice && x.Price <= MaxPrice)
+                .Select(x => x.ToString())
+                .ToArray();
+        }
     }
 }

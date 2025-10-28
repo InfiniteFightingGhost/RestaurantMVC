@@ -29,11 +29,17 @@
         private void InitializeComponent()
         {
             panel1 = new Panel();
+            panel3 = new Panel();
+            button27 = new Button();
+            button16 = new Button();
+            button15 = new Button();
+            button14 = new Button();
+            button12 = new Button();
+            button11 = new Button();
+            button10 = new Button();
             button17 = new Button();
-            button3 = new Button();
-            button2 = new Button();
-            button1 = new Button();
             panel2 = new Panel();
+            button26 = new Button();
             button13 = new Button();
             button9 = new Button();
             button8 = new Button();
@@ -41,23 +47,20 @@
             button6 = new Button();
             button5 = new Button();
             button4 = new Button();
-            panel3 = new Panel();
-            button16 = new Button();
-            button15 = new Button();
-            button14 = new Button();
-            button12 = new Button();
-            button11 = new Button();
-            button10 = new Button();
+            button3 = new Button();
+            button2 = new Button();
+            button1 = new Button();
             tabGroup = new TabControl();
+            MainMenu = new TabPage();
+            listBox8 = new ListBox();
+            label13 = new Label();
+            label12 = new Label();
             ListAllDrinks = new TabPage();
             listBox1 = new ListBox();
             DeleteFood = new TabPage();
             button22 = new Button();
             textBox12 = new TextBox();
             label18 = new Label();
-            MainMenu = new TabPage();
-            label13 = new Label();
-            label12 = new Label();
             ChangeInfoFood = new TabPage();
             button23 = new Button();
             groupBox6 = new GroupBox();
@@ -137,16 +140,29 @@
             radioButton2 = new RadioButton();
             radioButton1 = new RadioButton();
             label1 = new Label();
+            PriceFoods = new TabPage();
+            listBox10 = new ListBox();
+            button25 = new Button();
+            textBox17 = new TextBox();
+            textBox18 = new TextBox();
+            label25 = new Label();
+            label26 = new Label();
+            PriceDrinks = new TabPage();
+            listBox9 = new ListBox();
+            button24 = new Button();
+            label23 = new Label();
+            textBox16 = new TextBox();
+            label24 = new Label();
+            textBox15 = new TextBox();
             panel5 = new Panel();
             panel4 = new Panel();
-            listBox8 = new ListBox();
             panel1.SuspendLayout();
-            panel2.SuspendLayout();
             panel3.SuspendLayout();
+            panel2.SuspendLayout();
             tabGroup.SuspendLayout();
+            MainMenu.SuspendLayout();
             ListAllDrinks.SuspendLayout();
             DeleteFood.SuspendLayout();
-            MainMenu.SuspendLayout();
             ChangeInfoFood.SuspendLayout();
             groupBox6.SuspendLayout();
             ListAllFood.SuspendLayout();
@@ -164,12 +180,16 @@
             groupBox2.SuspendLayout();
             AddDrink.SuspendLayout();
             groupBox1.SuspendLayout();
+            PriceFoods.SuspendLayout();
+            PriceDrinks.SuspendLayout();
             SuspendLayout();
             // 
             // panel1
             // 
             panel1.BackColor = SystemColors.ControlDarkDark;
+            panel1.Controls.Add(panel3);
             panel1.Controls.Add(button17);
+            panel1.Controls.Add(panel2);
             panel1.Controls.Add(button3);
             panel1.Controls.Add(button2);
             panel1.Controls.Add(button1);
@@ -177,6 +197,91 @@
             panel1.Name = "panel1";
             panel1.Size = new Size(185, 1020);
             panel1.TabIndex = 0;
+            // 
+            // panel3
+            // 
+            panel3.BackColor = SystemColors.AppWorkspace;
+            panel3.Controls.Add(button27);
+            panel3.Controls.Add(button16);
+            panel3.Controls.Add(button15);
+            panel3.Controls.Add(button14);
+            panel3.Controls.Add(button12);
+            panel3.Controls.Add(button11);
+            panel3.Controls.Add(button10);
+            panel3.Location = new Point(21, 88);
+            panel3.Name = "panel3";
+            panel3.Size = new Size(147, 250);
+            panel3.TabIndex = 2;
+            // 
+            // button27
+            // 
+            button27.Location = new Point(11, 213);
+            button27.Name = "button27";
+            button27.Size = new Size(120, 26);
+            button27.TabIndex = 12;
+            button27.Text = "Price drinks";
+            button27.UseVisualStyleBackColor = true;
+            button27.Click += button27_Click;
+            // 
+            // button16
+            // 
+            button16.Location = new Point(11, 162);
+            button16.Name = "button16";
+            button16.Size = new Size(120, 45);
+            button16.TabIndex = 11;
+            button16.Text = "List all alcoholic beveregaes";
+            button16.UseVisualStyleBackColor = true;
+            button16.Click += button16_Click;
+            // 
+            // button15
+            // 
+            button15.Location = new Point(11, 132);
+            button15.Name = "button15";
+            button15.Size = new Size(120, 26);
+            button15.TabIndex = 10;
+            button15.Text = "List all soft drinks";
+            button15.UseVisualStyleBackColor = true;
+            button15.Click += button15_Click;
+            // 
+            // button14
+            // 
+            button14.Location = new Point(11, 101);
+            button14.Name = "button14";
+            button14.Size = new Size(120, 26);
+            button14.TabIndex = 9;
+            button14.Text = "List all drinks";
+            button14.UseVisualStyleBackColor = true;
+            button14.Click += button14_Click;
+            // 
+            // button12
+            // 
+            button12.Location = new Point(11, 71);
+            button12.Name = "button12";
+            button12.Size = new Size(120, 26);
+            button12.TabIndex = 8;
+            button12.Text = "Change info\r\n";
+            button12.UseVisualStyleBackColor = true;
+            button12.Click += button12_Click;
+            // 
+            // button11
+            // 
+            button11.Location = new Point(11, 40);
+            button11.Name = "button11";
+            button11.Size = new Size(120, 26);
+            button11.TabIndex = 7;
+            button11.Text = "Delete drink";
+            button11.UseVisualStyleBackColor = true;
+            button11.Click += button11_Click;
+            // 
+            // button10
+            // 
+            button10.Location = new Point(11, 11);
+            button10.Name = "button10";
+            button10.Size = new Size(120, 26);
+            button10.TabIndex = 6;
+            button10.Text = "Add drink";
+            button10.UseVisualStyleBackColor = true;
+            button10.Click += button10_Click;
             // 
             // button17
             // 
@@ -188,39 +293,10 @@
             button17.UseVisualStyleBackColor = true;
             button17.Click += button17_Click;
             // 
-            // button3
-            // 
-            button3.Location = new Point(18, 107);
-            button3.Name = "button3";
-            button3.Size = new Size(149, 31);
-            button3.TabIndex = 3;
-            button3.Text = "Drinks";
-            button3.UseVisualStyleBackColor = true;
-            button3.Click += button3_Click;
-            // 
-            // button2
-            // 
-            button2.Location = new Point(18, 71);
-            button2.Name = "button2";
-            button2.Size = new Size(149, 31);
-            button2.TabIndex = 2;
-            button2.Text = "Food";
-            button2.UseVisualStyleBackColor = true;
-            button2.Click += button2_Click;
-            // 
-            // button1
-            // 
-            button1.Location = new Point(18, 31);
-            button1.Name = "button1";
-            button1.Size = new Size(149, 32);
-            button1.TabIndex = 1;
-            button1.Text = "MainMenu";
-            button1.UseVisualStyleBackColor = true;
-            button1.Click += button1_Click;
-            // 
             // panel2
             // 
             panel2.BackColor = SystemColors.AppWorkspace;
+            panel2.Controls.Add(button26);
             panel2.Controls.Add(button13);
             panel2.Controls.Add(button9);
             panel2.Controls.Add(button8);
@@ -228,10 +304,21 @@
             panel2.Controls.Add(button6);
             panel2.Controls.Add(button5);
             panel2.Controls.Add(button4);
-            panel2.Location = new Point(182, 388);
+            panel2.Location = new Point(18, 344);
             panel2.Name = "panel2";
-            panel2.Size = new Size(150, 229);
+            panel2.Size = new Size(150, 265);
             panel2.TabIndex = 1;
+            panel2.Paint += panel2_Paint;
+            // 
+            // button26
+            // 
+            button26.Location = new Point(15, 228);
+            button26.Name = "button26";
+            button26.Size = new Size(120, 26);
+            button26.TabIndex = 7;
+            button26.Text = "Price foods";
+            button26.UseVisualStyleBackColor = true;
+            button26.Click += button26_Click;
             // 
             // button13
             // 
@@ -303,85 +390,41 @@
             button4.UseVisualStyleBackColor = true;
             button4.Click += button4_Click;
             // 
-            // panel3
+            // button3
             // 
-            panel3.BackColor = SystemColors.AppWorkspace;
-            panel3.Controls.Add(button16);
-            panel3.Controls.Add(button15);
-            panel3.Controls.Add(button14);
-            panel3.Controls.Add(button12);
-            panel3.Controls.Add(button11);
-            panel3.Controls.Add(button10);
-            panel3.Location = new Point(348, 388);
-            panel3.Name = "panel3";
-            panel3.Size = new Size(147, 221);
-            panel3.TabIndex = 2;
+            button3.Location = new Point(18, 107);
+            button3.Name = "button3";
+            button3.Size = new Size(149, 31);
+            button3.TabIndex = 3;
+            button3.Text = "Drinks";
+            button3.UseVisualStyleBackColor = true;
+            button3.Click += button3_Click;
             // 
-            // button16
+            // button2
             // 
-            button16.Location = new Point(11, 162);
-            button16.Name = "button16";
-            button16.Size = new Size(120, 45);
-            button16.TabIndex = 11;
-            button16.Text = "List all alcoholic beveregaes";
-            button16.UseVisualStyleBackColor = true;
-            button16.Click += button16_Click;
+            button2.Location = new Point(18, 71);
+            button2.Name = "button2";
+            button2.Size = new Size(149, 31);
+            button2.TabIndex = 2;
+            button2.Text = "Food";
+            button2.UseVisualStyleBackColor = true;
+            button2.Click += button2_Click;
             // 
-            // button15
+            // button1
             // 
-            button15.Location = new Point(11, 132);
-            button15.Name = "button15";
-            button15.Size = new Size(120, 26);
-            button15.TabIndex = 10;
-            button15.Text = "List all soft drinks";
-            button15.UseVisualStyleBackColor = true;
-            button15.Click += button15_Click;
-            // 
-            // button14
-            // 
-            button14.Location = new Point(11, 101);
-            button14.Name = "button14";
-            button14.Size = new Size(120, 26);
-            button14.TabIndex = 9;
-            button14.Text = "List all drinks";
-            button14.UseVisualStyleBackColor = true;
-            button14.Click += button14_Click;
-            // 
-            // button12
-            // 
-            button12.Location = new Point(11, 71);
-            button12.Name = "button12";
-            button12.Size = new Size(120, 26);
-            button12.TabIndex = 8;
-            button12.Text = "Change info\r\n";
-            button12.UseVisualStyleBackColor = true;
-            button12.Click += button12_Click;
-            // 
-            // button11
-            // 
-            button11.Location = new Point(11, 40);
-            button11.Name = "button11";
-            button11.Size = new Size(120, 26);
-            button11.TabIndex = 7;
-            button11.Text = "Delete drink";
-            button11.UseVisualStyleBackColor = true;
-            button11.Click += button11_Click;
-            // 
-            // button10
-            // 
-            button10.Location = new Point(11, 11);
-            button10.Name = "button10";
-            button10.Size = new Size(120, 26);
-            button10.TabIndex = 6;
-            button10.Text = "Add drink";
-            button10.UseVisualStyleBackColor = true;
-            button10.Click += button10_Click;
+            button1.Location = new Point(18, 31);
+            button1.Name = "button1";
+            button1.Size = new Size(149, 32);
+            button1.TabIndex = 1;
+            button1.Text = "MainMenu";
+            button1.UseVisualStyleBackColor = true;
+            button1.Click += button1_Click;
             // 
             // tabGroup
             // 
+            tabGroup.Controls.Add(MainMenu);
             tabGroup.Controls.Add(ListAllDrinks);
             tabGroup.Controls.Add(DeleteFood);
-            tabGroup.Controls.Add(MainMenu);
             tabGroup.Controls.Add(ChangeInfoFood);
             tabGroup.Controls.Add(ListAllFood);
             tabGroup.Controls.Add(ListAllAppetizers);
@@ -393,20 +436,67 @@
             tabGroup.Controls.Add(ListAllAlcoholicDrinks);
             tabGroup.Controls.Add(AddFood);
             tabGroup.Controls.Add(AddDrink);
+            tabGroup.Controls.Add(PriceFoods);
+            tabGroup.Controls.Add(PriceDrinks);
             tabGroup.Location = new Point(182, -1);
             tabGroup.Name = "tabGroup";
             tabGroup.SelectedIndex = 0;
             tabGroup.Size = new Size(942, 626);
             tabGroup.TabIndex = 3;
             // 
+            // MainMenu
+            // 
+            MainMenu.BackColor = Color.DarkGray;
+            MainMenu.Controls.Add(listBox8);
+            MainMenu.Controls.Add(label13);
+            MainMenu.Controls.Add(label12);
+            MainMenu.Location = new Point(4, 26);
+            MainMenu.Name = "MainMenu";
+            MainMenu.Padding = new Padding(3);
+            MainMenu.Size = new Size(934, 596);
+            MainMenu.TabIndex = 0;
+            MainMenu.Text = " ";
+            // 
+            // listBox8
+            // 
+            listBox8.BackColor = SystemColors.GrayText;
+            listBox8.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point, 204);
+            listBox8.ForeColor = SystemColors.Window;
+            listBox8.FormattingEnabled = true;
+            listBox8.HorizontalScrollbar = true;
+            listBox8.ItemHeight = 28;
+            listBox8.Location = new Point(73, 184);
+            listBox8.Name = "listBox8";
+            listBox8.Size = new Size(789, 368);
+            listBox8.TabIndex = 3;
+            // 
+            // label13
+            // 
+            label13.AutoSize = true;
+            label13.Location = new Point(497, 120);
+            label13.Name = "label13";
+            label13.Size = new Size(137, 17);
+            label13.TabIndex = 1;
+            label13.Text = "By Andrean and David";
+            // 
+            // label12
+            // 
+            label12.AutoSize = true;
+            label12.Font = new Font("Segoe UI Semibold", 28.2F, FontStyle.Bold | FontStyle.Italic, GraphicsUnit.Point, 204);
+            label12.Location = new Point(261, 58);
+            label12.Name = "label12";
+            label12.Size = new Size(391, 62);
+            label12.TabIndex = 0;
+            label12.Text = "Restaurant menu";
+            // 
             // ListAllDrinks
             // 
             ListAllDrinks.BackColor = Color.DarkGray;
             ListAllDrinks.Controls.Add(listBox1);
-            ListAllDrinks.Location = new Point(4, 26);
+            ListAllDrinks.Location = new Point(4, 29);
             ListAllDrinks.Name = "ListAllDrinks";
             ListAllDrinks.Padding = new Padding(3);
-            ListAllDrinks.Size = new Size(934, 596);
+            ListAllDrinks.Size = new Size(934, 593);
             ListAllDrinks.TabIndex = 10;
             ListAllDrinks.Text = "List all drinks";
             // 
@@ -464,38 +554,6 @@
             label18.Size = new Size(176, 41);
             label18.TabIndex = 13;
             label18.Text = "Food name:";
-            // 
-            // MainMenu
-            // 
-            MainMenu.BackColor = Color.DarkGray;
-            MainMenu.Controls.Add(listBox8);
-            MainMenu.Controls.Add(label13);
-            MainMenu.Controls.Add(label12);
-            MainMenu.Location = new Point(4, 26);
-            MainMenu.Name = "MainMenu";
-            MainMenu.Padding = new Padding(3);
-            MainMenu.Size = new Size(934, 596);
-            MainMenu.TabIndex = 0;
-            MainMenu.Text = " ";
-            // 
-            // label13
-            // 
-            label13.AutoSize = true;
-            label13.Location = new Point(497, 120);
-            label13.Name = "label13";
-            label13.Size = new Size(137, 17);
-            label13.TabIndex = 1;
-            label13.Text = "By Andrean and David";
-            // 
-            // label12
-            // 
-            label12.AutoSize = true;
-            label12.Font = new Font("Segoe UI Semibold", 28.2F, FontStyle.Bold | FontStyle.Italic, GraphicsUnit.Point, 204);
-            label12.Location = new Point(261, 58);
-            label12.Name = "label12";
-            label12.Size = new Size(391, 62);
-            label12.TabIndex = 0;
-            label12.Text = "Restaurant menu";
             // 
             // ChangeInfoFood
             // 
@@ -668,10 +726,10 @@
             // 
             ListAllAppetizers.BackColor = Color.DarkGray;
             ListAllAppetizers.Controls.Add(listBox5);
-            ListAllAppetizers.Location = new Point(4, 26);
+            ListAllAppetizers.Location = new Point(4, 29);
             ListAllAppetizers.Name = "ListAllAppetizers";
             ListAllAppetizers.Padding = new Padding(3);
-            ListAllAppetizers.Size = new Size(934, 596);
+            ListAllAppetizers.Size = new Size(934, 593);
             ListAllAppetizers.TabIndex = 6;
             ListAllAppetizers.Text = "List all appetizers";
             // 
@@ -716,10 +774,10 @@
             // 
             ListAllDesserts.BackColor = Color.DarkGray;
             ListAllDesserts.Controls.Add(listBox7);
-            ListAllDesserts.Location = new Point(4, 26);
+            ListAllDesserts.Location = new Point(4, 29);
             ListAllDesserts.Name = "ListAllDesserts";
             ListAllDesserts.Padding = new Padding(3);
-            ListAllDesserts.Size = new Size(934, 596);
+            ListAllDesserts.Size = new Size(934, 593);
             ListAllDesserts.TabIndex = 8;
             ListAllDesserts.Text = "List all deserts";
             // 
@@ -788,10 +846,10 @@
             ChangeInfoDrink.Controls.Add(label16);
             ChangeInfoDrink.Controls.Add(textBox10);
             ChangeInfoDrink.Controls.Add(label15);
-            ChangeInfoDrink.Location = new Point(4, 26);
+            ChangeInfoDrink.Location = new Point(4, 29);
             ChangeInfoDrink.Name = "ChangeInfoDrink";
             ChangeInfoDrink.Padding = new Padding(3);
-            ChangeInfoDrink.Size = new Size(934, 596);
+            ChangeInfoDrink.Size = new Size(934, 593);
             ChangeInfoDrink.TabIndex = 11;
             ChangeInfoDrink.Text = "Change info of Drink";
             // 
@@ -1357,11 +1415,164 @@
             // 
             label1.AutoSize = true;
             label1.Font = new Font("Segoe UI", 18F, FontStyle.Regular, GraphicsUnit.Point, 204);
-            label1.Location = new Point(25, 67);
+            label1.Location = new Point(30, 67);
             label1.Name = "label1";
             label1.Size = new Size(177, 41);
             label1.TabIndex = 0;
             label1.Text = "Drink name:";
+            // 
+            // PriceFoods
+            // 
+            PriceFoods.BackColor = Color.DarkGray;
+            PriceFoods.Controls.Add(listBox10);
+            PriceFoods.Controls.Add(button25);
+            PriceFoods.Controls.Add(textBox17);
+            PriceFoods.Controls.Add(textBox18);
+            PriceFoods.Controls.Add(label25);
+            PriceFoods.Controls.Add(label26);
+            PriceFoods.Location = new Point(4, 29);
+            PriceFoods.Name = "PriceFoods";
+            PriceFoods.Padding = new Padding(3);
+            PriceFoods.Size = new Size(934, 593);
+            PriceFoods.TabIndex = 15;
+            PriceFoods.Text = "Foods between price";
+            // 
+            // listBox10
+            // 
+            listBox10.BackColor = SystemColors.GrayText;
+            listBox10.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point, 204);
+            listBox10.ForeColor = SystemColors.Window;
+            listBox10.FormattingEnabled = true;
+            listBox10.HorizontalScrollbar = true;
+            listBox10.ItemHeight = 28;
+            listBox10.Location = new Point(55, 181);
+            listBox10.Name = "listBox10";
+            listBox10.Size = new Size(824, 368);
+            listBox10.TabIndex = 11;
+            // 
+            // button25
+            // 
+            button25.Font = new Font("Segoe UI", 16.2F, FontStyle.Regular, GraphicsUnit.Point, 204);
+            button25.Location = new Point(617, 48);
+            button25.Name = "button25";
+            button25.Size = new Size(262, 99);
+            button25.TabIndex = 10;
+            button25.Text = "Print";
+            button25.UseVisualStyleBackColor = true;
+            button25.Click += button25_Click;
+            // 
+            // textBox17
+            // 
+            textBox17.Font = new Font("Segoe UI", 16.2F, FontStyle.Regular, GraphicsUnit.Point, 204);
+            textBox17.Location = new Point(303, 104);
+            textBox17.Name = "textBox17";
+            textBox17.Size = new Size(227, 43);
+            textBox17.TabIndex = 9;
+            // 
+            // textBox18
+            // 
+            textBox18.Font = new Font("Segoe UI", 16.2F, FontStyle.Regular, GraphicsUnit.Point, 204);
+            textBox18.Location = new Point(303, 48);
+            textBox18.Name = "textBox18";
+            textBox18.Size = new Size(227, 43);
+            textBox18.TabIndex = 8;
+            // 
+            // label25
+            // 
+            label25.AutoSize = true;
+            label25.Font = new Font("Segoe UI", 18F, FontStyle.Regular, GraphicsUnit.Point, 204);
+            label25.Location = new Point(55, 104);
+            label25.Name = "label25";
+            label25.Size = new Size(230, 41);
+            label25.TabIndex = 7;
+            label25.Text = "Maximum price:";
+            // 
+            // label26
+            // 
+            label26.AutoSize = true;
+            label26.Font = new Font("Segoe UI", 18F, FontStyle.Regular, GraphicsUnit.Point, 204);
+            label26.Location = new Point(60, 48);
+            label26.Name = "label26";
+            label26.Size = new Size(225, 41);
+            label26.TabIndex = 6;
+            label26.Text = "Minimum price:";
+            // 
+            // PriceDrinks
+            // 
+            PriceDrinks.BackColor = Color.DarkGray;
+            PriceDrinks.Controls.Add(listBox9);
+            PriceDrinks.Controls.Add(button24);
+            PriceDrinks.Controls.Add(label23);
+            PriceDrinks.Controls.Add(textBox16);
+            PriceDrinks.Controls.Add(label24);
+            PriceDrinks.Controls.Add(textBox15);
+            PriceDrinks.ForeColor = SystemColors.ControlText;
+            PriceDrinks.Location = new Point(4, 26);
+            PriceDrinks.Name = "PriceDrinks";
+            PriceDrinks.Padding = new Padding(3);
+            PriceDrinks.Size = new Size(934, 596);
+            PriceDrinks.TabIndex = 14;
+            PriceDrinks.Text = "Drinks between price";
+            // 
+            // listBox9
+            // 
+            listBox9.BackColor = SystemColors.GrayText;
+            listBox9.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point, 204);
+            listBox9.ForeColor = SystemColors.Window;
+            listBox9.FormattingEnabled = true;
+            listBox9.HorizontalScrollbar = true;
+            listBox9.ItemHeight = 28;
+            listBox9.Location = new Point(57, 173);
+            listBox9.Name = "listBox9";
+            listBox9.Size = new Size(824, 368);
+            listBox9.TabIndex = 12;
+            // 
+            // button24
+            // 
+            button24.Font = new Font("Segoe UI", 16.2F, FontStyle.Regular, GraphicsUnit.Point, 204);
+            button24.Location = new Point(619, 40);
+            button24.Name = "button24";
+            button24.Size = new Size(262, 99);
+            button24.TabIndex = 11;
+            button24.Text = "Print";
+            button24.UseVisualStyleBackColor = true;
+            button24.Click += button24_Click;
+            // 
+            // label23
+            // 
+            label23.AutoSize = true;
+            label23.Font = new Font("Segoe UI", 18F, FontStyle.Regular, GraphicsUnit.Point, 204);
+            label23.Location = new Point(62, 40);
+            label23.Name = "label23";
+            label23.Size = new Size(225, 41);
+            label23.TabIndex = 7;
+            label23.Text = "Minimum price:";
+            // 
+            // textBox16
+            // 
+            textBox16.Font = new Font("Segoe UI", 16.2F, FontStyle.Regular, GraphicsUnit.Point, 204);
+            textBox16.Location = new Point(305, 96);
+            textBox16.Name = "textBox16";
+            textBox16.Size = new Size(227, 43);
+            textBox16.TabIndex = 10;
+            // 
+            // label24
+            // 
+            label24.AutoSize = true;
+            label24.Font = new Font("Segoe UI", 18F, FontStyle.Regular, GraphicsUnit.Point, 204);
+            label24.Location = new Point(57, 96);
+            label24.Name = "label24";
+            label24.Size = new Size(230, 41);
+            label24.TabIndex = 8;
+            label24.Text = "Maximum price:";
+            // 
+            // textBox15
+            // 
+            textBox15.Font = new Font("Segoe UI", 16.2F, FontStyle.Regular, GraphicsUnit.Point, 204);
+            textBox15.Location = new Point(305, 40);
+            textBox15.Name = "textBox15";
+            textBox15.Size = new Size(227, 43);
+            textBox15.TabIndex = 9;
             // 
             // panel5
             // 
@@ -1379,44 +1590,29 @@
             panel4.Size = new Size(954, 29);
             panel4.TabIndex = 6;
             // 
-            // listBox8
-            // 
-            listBox8.BackColor = SystemColors.GrayText;
-            listBox8.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point, 204);
-            listBox8.ForeColor = SystemColors.Window;
-            listBox8.FormattingEnabled = true;
-            listBox8.HorizontalScrollbar = true;
-            listBox8.ItemHeight = 28;
-            listBox8.Location = new Point(73, 184);
-            listBox8.Name = "listBox8";
-            listBox8.Size = new Size(789, 368);
-            listBox8.TabIndex = 3;
-            // 
             // Form1
             // 
             AutoScaleDimensions = new SizeF(7F, 17F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(1119, 616);
             ControlBox = false;
-            Controls.Add(panel4);
             Controls.Add(panel5);
+            Controls.Add(panel4);
             Controls.Add(tabGroup);
-            Controls.Add(panel3);
-            Controls.Add(panel2);
             Controls.Add(panel1);
             Font = new Font("Segoe UI", 7.8F, FontStyle.Regular, GraphicsUnit.Point, 204);
             FormBorderStyle = FormBorderStyle.FixedDialog;
             Name = "Form1";
             Text = "Restaurant Menu";
             panel1.ResumeLayout(false);
-            panel2.ResumeLayout(false);
             panel3.ResumeLayout(false);
+            panel2.ResumeLayout(false);
             tabGroup.ResumeLayout(false);
+            MainMenu.ResumeLayout(false);
+            MainMenu.PerformLayout();
             ListAllDrinks.ResumeLayout(false);
             DeleteFood.ResumeLayout(false);
             DeleteFood.PerformLayout();
-            MainMenu.ResumeLayout(false);
-            MainMenu.PerformLayout();
             ChangeInfoFood.ResumeLayout(false);
             ChangeInfoFood.PerformLayout();
             groupBox6.ResumeLayout(false);
@@ -1445,6 +1641,10 @@
             AddDrink.PerformLayout();
             groupBox1.ResumeLayout(false);
             groupBox1.PerformLayout();
+            PriceFoods.ResumeLayout(false);
+            PriceFoods.PerformLayout();
+            PriceDrinks.ResumeLayout(false);
+            PriceDrinks.PerformLayout();
             ResumeLayout(false);
         }
 
@@ -1562,5 +1762,21 @@
         private Label label22;
         private Panel panel4;
         private ListBox listBox8;
+        private TabPage PriceDrinks;
+        private TabPage PriceFoods;
+        private ListBox listBox10;
+        private Button button25;
+        private TextBox textBox17;
+        private TextBox textBox18;
+        private Label label25;
+        private Label label26;
+        private ListBox listBox9;
+        private Button button24;
+        private Label label23;
+        private TextBox textBox16;
+        private Label label24;
+        private TextBox textBox15;
+        private Button button26;
+        private Button button27;
     }
 }

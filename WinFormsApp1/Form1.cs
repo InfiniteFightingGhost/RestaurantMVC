@@ -301,5 +301,47 @@ namespace WinFormsApp1
         {
             tabGroup.SelectTab(DeleteFood);
         }
+
+
+        private void button25_Click(object sender, EventArgs e)
+        {
+            listBox10.Items.Clear();
+            double min = double.Parse(textBox18.Text);
+            double max = double.Parse(textBox17.Text);
+            textBox18.Text = "";
+            textBox17.Text = "";
+            foreach (string item in foodControl.ListBetweenPrices(min, max))
+            {
+                listBox10.Items.Add(item);
+            }
+        }
+
+        private void button26_Click(object sender, EventArgs e)
+        {
+            tabGroup.SelectTab(PriceFoods);
+        }
+
+        private void button27_Click(object sender, EventArgs e)
+        {
+            tabGroup.SelectTab(PriceDrinks);
+        }
+
+        private void panel2_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void button24_Click(object sender, EventArgs e)
+        {
+            listBox9.Items.Clear();
+            double min = double.Parse(textBox15.Text);
+            double max = double.Parse(textBox16.Text);
+            textBox15.Text = "";
+            textBox16.Text = "";
+            foreach (string item in drinkControl.DrinksBetweenPrice(min, max))
+            {
+                listBox9.Items.Add(item);
+            }
+        }
     }
 }

@@ -85,5 +85,12 @@ namespace WinFormsApp1.Controller
            AllDrinks.Drinks.RemoveAll(d => d.Name == name);
            return "Drink removed successfully";
         }
+        public List<string> DrinksBetweenPrice(double minPrice, double maxPrice)
+        {
+            return AllDrinks.Drinks
+                .Where(d => d.Price >= minPrice && d.Price <= maxPrice)
+                .Select(d => d.ToString())
+                .ToList();
+        }
     }
 }
