@@ -247,5 +247,28 @@ namespace WinFormsApp1
             }
             tabGroup.SelectTab(ListAllDesserts);
         }
+
+        private void button13_Click(object sender, EventArgs e)
+        {
+            tabGroup.SelectTab(ChangeInfoFood);
+        }
+
+        private void button23_Click(object sender, EventArgs e)
+        {
+            string name = textBox14.Text;
+            string newInfo = textBox13.Text;
+            string parameter = "";
+            if (radioButton15.Checked)
+                parameter = "Name";
+            else if (radioButton14.Checked)
+                parameter = "Price";
+            else if (radioButton15.Checked)
+                parameter = "Allergens";
+            else if (radioButton14.Checked)
+                parameter = "Ingredients";
+            else if (radioButton15.Checked)
+                parameter = "AddOns";
+            foodControl.ChangeInfo(name, newInfo, parameter);
+        }
     }
 }

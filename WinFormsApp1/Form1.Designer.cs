@@ -53,6 +53,18 @@
             label13 = new Label();
             label12 = new Label();
             ChangeInfoFood = new TabPage();
+            button23 = new Button();
+            groupBox6 = new GroupBox();
+            radioButton16 = new RadioButton();
+            radioButton12 = new RadioButton();
+            radioButton13 = new RadioButton();
+            radioButton14 = new RadioButton();
+            radioButton15 = new RadioButton();
+            label19 = new Label();
+            textBox13 = new TextBox();
+            label20 = new Label();
+            textBox14 = new TextBox();
+            label21 = new Label();
             ListAllFood = new TabPage();
             listBox4 = new ListBox();
             ListAllAppetizers = new TabPage();
@@ -129,6 +141,8 @@
             panel3.SuspendLayout();
             tabGroup.SuspendLayout();
             MainMenu.SuspendLayout();
+            ChangeInfoFood.SuspendLayout();
+            groupBox6.SuspendLayout();
             ListAllFood.SuspendLayout();
             ListAllAppetizers.SuspendLayout();
             ListAllMainCourses.SuspendLayout();
@@ -222,6 +236,7 @@
             button13.TabIndex = 6;
             button13.Text = "Change info";
             button13.UseVisualStyleBackColor = true;
+            button13.Click += button13_Click;
             // 
             // button9
             // 
@@ -412,12 +427,145 @@
             // ChangeInfoFood
             // 
             ChangeInfoFood.BackColor = Color.DarkGray;
+            ChangeInfoFood.Controls.Add(button23);
+            ChangeInfoFood.Controls.Add(groupBox6);
+            ChangeInfoFood.Controls.Add(label19);
+            ChangeInfoFood.Controls.Add(textBox13);
+            ChangeInfoFood.Controls.Add(label20);
+            ChangeInfoFood.Controls.Add(textBox14);
+            ChangeInfoFood.Controls.Add(label21);
             ChangeInfoFood.Location = new Point(4, 29);
             ChangeInfoFood.Name = "ChangeInfoFood";
             ChangeInfoFood.Padding = new Padding(3);
             ChangeInfoFood.Size = new Size(1057, 703);
             ChangeInfoFood.TabIndex = 4;
             ChangeInfoFood.Text = "Change info of food";
+            // 
+            // button23
+            // 
+            button23.Font = new Font("Segoe UI", 24F, FontStyle.Regular, GraphicsUnit.Point, 204);
+            button23.Location = new Point(258, 236);
+            button23.Name = "button23";
+            button23.Size = new Size(269, 105);
+            button23.TabIndex = 25;
+            button23.Text = "Change info";
+            button23.UseVisualStyleBackColor = true;
+            button23.Click += button23_Click;
+            // 
+            // groupBox6
+            // 
+            groupBox6.Controls.Add(radioButton16);
+            groupBox6.Controls.Add(radioButton12);
+            groupBox6.Controls.Add(radioButton13);
+            groupBox6.Controls.Add(radioButton14);
+            groupBox6.Controls.Add(radioButton15);
+            groupBox6.Font = new Font("Segoe UI", 16.2F, FontStyle.Regular, GraphicsUnit.Point, 204);
+            groupBox6.Location = new Point(653, 108);
+            groupBox6.Name = "groupBox6";
+            groupBox6.Size = new Size(255, 275);
+            groupBox6.TabIndex = 23;
+            groupBox6.TabStop = false;
+            // 
+            // radioButton16
+            // 
+            radioButton16.AutoSize = true;
+            radioButton16.Location = new Point(20, 224);
+            radioButton16.Name = "radioButton16";
+            radioButton16.Size = new Size(140, 42);
+            radioButton16.TabIndex = 4;
+            radioButton16.TabStop = true;
+            radioButton16.Text = "Add ons";
+            radioButton16.UseVisualStyleBackColor = true;
+            // 
+            // radioButton12
+            // 
+            radioButton12.AutoSize = true;
+            radioButton12.Location = new Point(20, 176);
+            radioButton12.Name = "radioButton12";
+            radioButton12.Size = new Size(177, 42);
+            radioButton12.TabIndex = 3;
+            radioButton12.TabStop = true;
+            radioButton12.Text = "Ingredients";
+            radioButton12.UseVisualStyleBackColor = true;
+            // 
+            // radioButton13
+            // 
+            radioButton13.AutoSize = true;
+            radioButton13.Location = new Point(20, 128);
+            radioButton13.Name = "radioButton13";
+            radioButton13.Size = new Size(154, 42);
+            radioButton13.TabIndex = 2;
+            radioButton13.TabStop = true;
+            radioButton13.Text = "Allergens";
+            radioButton13.UseVisualStyleBackColor = true;
+            // 
+            // radioButton14
+            // 
+            radioButton14.AutoSize = true;
+            radioButton14.Location = new Point(20, 80);
+            radioButton14.Name = "radioButton14";
+            radioButton14.Size = new Size(99, 42);
+            radioButton14.TabIndex = 1;
+            radioButton14.TabStop = true;
+            radioButton14.Text = "Price";
+            radioButton14.UseVisualStyleBackColor = true;
+            // 
+            // radioButton15
+            // 
+            radioButton15.AutoSize = true;
+            radioButton15.Location = new Point(20, 31);
+            radioButton15.Name = "radioButton15";
+            radioButton15.Size = new Size(112, 42);
+            radioButton15.TabIndex = 0;
+            radioButton15.TabStop = true;
+            radioButton15.Text = "Name";
+            radioButton15.UseVisualStyleBackColor = true;
+            // 
+            // label19
+            // 
+            label19.AutoSize = true;
+            label19.Font = new Font("Segoe UI", 18F, FontStyle.Regular, GraphicsUnit.Point, 204);
+            label19.Location = new Point(653, 64);
+            label19.Name = "label19";
+            label19.Size = new Size(217, 41);
+            label19.TabIndex = 24;
+            label19.Text = "Food property:";
+            // 
+            // textBox13
+            // 
+            textBox13.Font = new Font("Segoe UI", 16.2F, FontStyle.Regular, GraphicsUnit.Point, 204);
+            textBox13.Location = new Point(330, 153);
+            textBox13.Name = "textBox13";
+            textBox13.Size = new Size(259, 43);
+            textBox13.TabIndex = 22;
+            // 
+            // label20
+            // 
+            label20.AutoSize = true;
+            label20.Font = new Font("Segoe UI", 18F, FontStyle.Regular, GraphicsUnit.Point, 204);
+            label20.Location = new Point(170, 153);
+            label20.Name = "label20";
+            label20.Size = new Size(144, 41);
+            label20.TabIndex = 21;
+            label20.Text = "New info:";
+            // 
+            // textBox14
+            // 
+            textBox14.Font = new Font("Segoe UI", 16.2F, FontStyle.Regular, GraphicsUnit.Point, 204);
+            textBox14.Location = new Point(330, 88);
+            textBox14.Name = "textBox14";
+            textBox14.Size = new Size(259, 43);
+            textBox14.TabIndex = 20;
+            // 
+            // label21
+            // 
+            label21.AutoSize = true;
+            label21.Font = new Font("Segoe UI", 18F, FontStyle.Regular, GraphicsUnit.Point, 204);
+            label21.Location = new Point(137, 90);
+            label21.Name = "label21";
+            label21.Size = new Size(176, 41);
+            label21.TabIndex = 19;
+            label21.Text = "Food name:";
             // 
             // ListAllFood
             // 
@@ -1202,6 +1350,10 @@
             tabGroup.ResumeLayout(false);
             MainMenu.ResumeLayout(false);
             MainMenu.PerformLayout();
+            ChangeInfoFood.ResumeLayout(false);
+            ChangeInfoFood.PerformLayout();
+            groupBox6.ResumeLayout(false);
+            groupBox6.PerformLayout();
             ListAllFood.ResumeLayout(false);
             ListAllAppetizers.ResumeLayout(false);
             ListAllMainCourses.ResumeLayout(false);
@@ -1330,5 +1482,17 @@
         private ListBox listBox5;
         private ListBox listBox6;
         private ListBox listBox7;
+        private Button button23;
+        private GroupBox groupBox6;
+        private RadioButton radioButton16;
+        private RadioButton radioButton12;
+        private RadioButton radioButton13;
+        private RadioButton radioButton14;
+        private RadioButton radioButton15;
+        private Label label19;
+        private TextBox textBox13;
+        private Label label20;
+        private TextBox textBox14;
+        private Label label21;
     }
 }
