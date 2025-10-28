@@ -21,37 +21,24 @@ namespace WinFormsApp1
         {
             if (!panel2.Visible)
             {
-                button3.Location = new Point(21, 425);
-                panel2.Location = new Point(10, 135);
-                panel2.Visible = true;
+                button3.Location = new Point(18, 107 + 229 + 7);
+                panel2.Location = new Point(10, 107);
                 if (panel3.Visible)
                 {
-                    panel3.Location = new Point(panel3.Location.X, button3.Location.Y + 47);
+                    panel3.Location = new Point(panel3.Location.X, button3.Location.Y + 36);
                 }
             }
             else
             {
-                panel2.Visible = false;
-                button3.Location = new Point(21, 135);
-                if (panel3.Visible)
-                {
-                    panel3.Location = new Point(panel3.Location.X, button3.Location.Y + 47);
-                }
+                button3.Location = new Point(18, 107);
+                panel3.Location = new Point(panel3.Location.X, button3.Location.Y + 36);
             }
+            panel2.Visible = !panel2.Visible;
         }
-
         private void button3_Click(object sender, EventArgs e)
         {
-            if (!panel3.Visible)
-            {
-                panel3.Visible = true;
-                panel3.Location = new Point(11, button3.Location.Y + 47);
-            }
-            else
-            {
-                panel3.Visible = false;
-                panel3.Location = new Point(11, button3.Location.Y + 47);
-            }
+            panel3.Visible = !panel3.Visible;
+            panel3.Location = new Point(11, button3.Location.Y + 36);
         }
 
         private void button17_Click(object sender, EventArgs e)
@@ -269,6 +256,11 @@ namespace WinFormsApp1
             else if (radioButton15.Checked)
                 parameter = "AddOns";
             foodControl.ChangeInfo(name, newInfo, parameter);
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            tabGroup.SelectTab(MainMenu);
         }
     }
 }
